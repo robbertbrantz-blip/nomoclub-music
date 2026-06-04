@@ -10,6 +10,13 @@ Statische, tweetalige site voor **nomoclub.com**. Engels is de hoofdtaal (standa
 - `lang.js` — EN/NL-taalwissel + valuta-schakelaar (onthoudt keuze in de browser)
 - `hero-en.jpg` / `hero-nl.jpg` — hero-afbeeldingen per taal
 - `og.jpg` — social-share-afbeelding (1200×630)
+- `logo.png` — Nomoclub-logo (rond, transparant) — ook gebruikt als favicon
+
+## Secties
+Hero (met logo + creative) · Voor wie · Hoe het werkt (4 stappen) · **Voorbeelden** (knoppen naar Spotify + Instagram) · Prijzen (valuta-schakelaar) · Reviews · FAQ · Contact (Messenger/Facebook/Instagram) · Footer (logo + social-iconen Spotify/Instagram/Facebook/Messenger + juridische links).
+
+## Links
+Spotify: `open.spotify.com/artist/33cTnnfGS34lJlcMzE3M1s` · Facebook: `facebook.com/nomoclubmusic` · Instagram: `instagram.com/nomoclubmusic` · Messenger: `m.me/nomoclubmusic`. WhatsApp-knop kan erbij zodra Meta je account goedkeurt.
 
 ## SEO
 - Engels als `lang` en standaardtaal; `<title>`, meta description, keywords, canonical, robots.
