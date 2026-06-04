@@ -6,7 +6,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);background:#fbf4ec;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);background:#fbf4ec;line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+h1,h2,h3,.brand,.btn,.eyebrow,.eyebrow2,.price,.badge,.curswitch button,.curlabel,.step .n,.foot-brand strong{font-family:'Poppins','Inter',sans-serif}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
