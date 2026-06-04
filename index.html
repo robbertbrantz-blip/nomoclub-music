@@ -1,156 +1,248 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nomoclub Music — Een persoonlijk lied, uit het hart</title>
-<meta name="description" content="Een persoonlijk lied op maat, gemaakt uit het hart. Voor liefde, een bruiloft, verjaardag of herdenking. Jij vertelt het verhaal, wij maken er een lied van.">
-<meta property="og:title" content="Nomoclub Music — Een persoonlijk lied, uit het hart">
-<meta property="og:description" content="Een lied op maat over de mensen van wie je houdt.">
+
+<!-- Primary SEO -->
+<title>Custom Personal Songs, Written From the Heart | Nomoclub Music</title>
+<meta name="description" content="Nomoclub Music turns your story into a unique, personal song — a heartfelt, one-of-a-kind gift for weddings, birthdays, anniversaries and remembrance. You approve the lyrics before you pay.">
+<meta name="keywords" content="custom song, personal song, song gift, custom song gift, wedding song, birthday song, memorial song, personalised song, Nomoclub Music">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nomoclub Music">
+<meta name="theme-color" content="#c0392b">
+<link rel="canonical" href="https://nomoclub.com/">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:site_name" content="Nomoclub Music">
+<meta property="og:title" content="Custom Personal Songs, Written From the Heart | Nomoclub Music">
+<meta property="og:description" content="Tell us your story and we turn it into a unique, personal song — a heartfelt gift for weddings, birthdays, anniversaries and remembrance.">
+<meta property="og:url" content="https://nomoclub.com/">
+<meta property="og:image" content="https://nomoclub.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="nl_NL">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Personal Songs, Written From the Heart | Nomoclub Music">
+<meta name="twitter:description" content="A unique, personal song made from your story — a heartfelt gift for any moment that matters.">
+<meta name="twitter:image" content="https://nomoclub.com/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='30%25'%3E%3Cstop offset='0' stop-color='%23f6c560'/%3E%3Cstop offset='0.5' stop-color='%23e8743b'/%3E%3Cstop offset='1' stop-color='%237a1f3d'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='16' fill='url(%23g)'/%3E%3Cpath d='M16 24s-7-4.5-7-9.5A3.7 3.7 0 0 1 16 12a3.7 3.7 0 0 1 7 2.5C23 19.5 16 24 16 24z' fill='%23fff6ed'/%3E%3C/svg%3E">
+
+<link rel="preload" as="image" href="hero-en.jpg">
 <link rel="stylesheet" href="styles.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nomoclub.com/#org",
+      "name": "Nomoclub Music",
+      "url": "https://nomoclub.com/",
+      "description": "Custom personal songs written from the heart.",
+      "slogan": "Straight from the Heart",
+      "sameAs": [
+        "https://www.facebook.com/nomoclubmusic",
+        "https://www.instagram.com/nomoclubmusic"
+      ],
+      "brand": "Nomoclub Music",
+      "parentOrganization": { "@type": "Organization", "name": "Zonder Stropdas Company B.V." }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nomoclub.com/#website",
+      "url": "https://nomoclub.com/",
+      "name": "Nomoclub Music",
+      "inLanguage": ["en", "nl"],
+      "publisher": { "@id": "https://nomoclub.com/#org" }
+    },
+    {
+      "@type": "Product",
+      "name": "Personal Song — Straight from the Heart",
+      "description": "A unique, personal song written from your story. Optionally released on Spotify, Apple Music and YouTube with custom cover art.",
+      "brand": { "@id": "https://nomoclub.com/#org" },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Private",
+          "price": "69.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://nomoclub.com/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Complete",
+          "price": "89.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://nomoclub.com/#pricing"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
-<body class="lang-nl">
+<body class="lang-en">
 
 <header class="nav">
   <div class="wrap">
-    <div class="brand">NOMOCLUB<small>MUSIC</small></div>
+    <a href="index.html" class="brandlink"><div class="brand">NOMOCLUB<small>MUSIC</small></div></a>
     <div class="nav-right">
-      <a href="#hoe" class="hidemob"><span class="nl">Hoe het werkt</span><span class="en">How it works</span></a>
-      <a href="#prijzen" class="hidemob"><span class="nl">Prijzen</span><span class="en">Pricing</span></a>
-      <a href="#contact"><span class="nl">Contact</span><span class="en">Contact</span></a>
+      <a href="#how" class="hidemob"><span class="en">How it works</span><span class="nl">Hoe het werkt</span></a>
+      <a href="#pricing" class="hidemob"><span class="en">Pricing</span><span class="nl">Prijzen</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="nl">Contact</span></a>
       <div class="langtoggle">
-        <button data-lang="nl" class="active">NL</button>
-        <button data-lang="en">EN</button>
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="nl">NL</button>
       </div>
     </div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow"><span class="nl">Persoonlijke liedjes op maat</span><span class="en">Personal songs, made for you</span></div>
-    <h1><span class="nl">Een lied, uit het hart</span><span class="en">A song, straight from the heart</span></h1>
-    <p class="tag">
-      <span class="nl">Jij vertelt het verhaal van iemand om wie je geeft. Wij maken er een echt, persoonlijk lied van — een cadeau dat blijft.</span>
-      <span class="en">You tell the story of someone you love. We turn it into a real, personal song — a gift that lasts.</span>
-    </p>
-    <div class="btns">
-      <a class="btn" href="#prijzen"><span class="nl">Bekijk de opties</span><span class="en">See the options</span></a>
-      <a class="btn ghost" href="#contact"><span class="nl">Stel je vraag</span><span class="en">Ask us anything</span></a>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow"><span class="en">Custom songs · made with love</span><span class="nl">Persoonlijke liedjes · met liefde gemaakt</span></div>
+      <h1><span class="en">A personal song, written just for them</span><span class="nl">Een persoonlijk lied, speciaal voor hen</span></h1>
+      <p class="tag">
+        <span class="en">Tell us your story and we turn it into a unique, heartfelt song — a one-of-a-kind gift for weddings, birthdays, anniversaries and remembrance.</span>
+        <span class="nl">Vertel ons je verhaal en wij maken er een uniek lied van — een bijzonder cadeau voor een bruiloft, verjaardag, jubileum of herdenking.</span>
+      </p>
+      <div class="btns">
+        <a class="btn" href="#pricing"><span class="en">See pricing</span><span class="nl">Bekijk de prijzen</span></a>
+        <a class="btn ghost" href="#contact"><span class="en">Ask us anything</span><span class="nl">Stel je vraag</span></a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img class="en" src="hero-en.jpg" width="1600" height="837" alt="Nomoclub Music — Straight from the Heart: a person watching a sunset over the sea">
+      <img class="nl" src="hero-nl.jpg" width="1600" height="837" alt="Nomoclub Music — Uit je Hart: iemand kijkt naar een zonsondergang boven zee">
     </div>
   </div>
 </section>
 
-<section id="voor-wie" class="center">
+<section id="for-whom" class="center">
   <div class="wrap">
-    <div class="eyebrow2"><span class="nl">Voor elk moment dat telt</span><span class="en">For every moment that matters</span></div>
-    <h2><span class="nl">Voor wie maak je een lied?</span><span class="en">Who is the song for?</span></h2>
+    <div class="eyebrow2"><span class="en">For every moment that matters</span><span class="nl">Voor elk moment dat telt</span></div>
+    <h2><span class="en">Who is the song for?</span><span class="nl">Voor wie maak je een lied?</span></h2>
     <div class="rule"></div>
-    <p class="lead"><span class="nl">Eén verhaal, jouw woorden, een lied dat het vasthoudt.</span><span class="en">One story, your words, a song that holds onto it.</span></p>
+    <p class="lead"><span class="en">One story, your words, a song that holds onto it.</span><span class="nl">Eén verhaal, jouw woorden, een lied dat het vasthoudt.</span></p>
     <div class="chips">
-      <span class="chip"><span class="nl">❤️ Liefde &amp; Valentijn</span><span class="en">❤️ Love &amp; Valentine's</span></span>
-      <span class="chip"><span class="nl">💍 Bruiloft &amp; jubileum</span><span class="en">💍 Wedding &amp; anniversary</span></span>
-      <span class="chip"><span class="nl">🎂 Verjaardag &amp; mijlpaal</span><span class="en">🎂 Birthday &amp; milestone</span></span>
-      <span class="chip"><span class="nl">🕊️ Herdenking &amp; afscheid</span><span class="en">🕊️ Remembrance &amp; farewell</span></span>
-      <span class="chip"><span class="nl">🙏 Bedankt &amp; eerbetoon</span><span class="en">🙏 Thank you &amp; tribute</span></span>
+      <span class="chip"><span class="en">❤️ Love &amp; Valentine's</span><span class="nl">❤️ Liefde &amp; Valentijn</span></span>
+      <span class="chip"><span class="en">💍 Wedding &amp; anniversary</span><span class="nl">💍 Bruiloft &amp; jubileum</span></span>
+      <span class="chip"><span class="en">🎂 Birthday &amp; milestone</span><span class="nl">🎂 Verjaardag &amp; mijlpaal</span></span>
+      <span class="chip"><span class="en">🕊️ Remembrance &amp; farewell</span><span class="nl">🕊️ Herdenking &amp; afscheid</span></span>
+      <span class="chip"><span class="en">🙏 Thank you &amp; tribute</span><span class="nl">🙏 Bedankt &amp; eerbetoon</span></span>
     </div>
   </div>
 </section>
 
-<section id="hoe" style="background:#fff">
+<section id="how" style="background:#fff">
   <div class="wrap center">
-    <div class="eyebrow2"><span class="nl">Zo werkt het</span><span class="en">How it works</span></div>
-    <h2><span class="nl">In vier stappen klaar</span><span class="en">Done in four steps</span></h2>
+    <div class="eyebrow2"><span class="en">How it works</span><span class="nl">Zo werkt het</span></div>
+    <h2><span class="en">Done in four steps</span><span class="nl">In vier stappen klaar</span></h2>
     <div class="rule"></div>
-    <p class="lead"><span class="nl">Eenvoudig, persoonlijk en altijd met een mens die er met aandacht naar luistert.</span><span class="en">Simple, personal, and always with a real person listening closely.</span></p>
+    <p class="lead"><span class="en">Simple, personal, and always with a real person listening closely.</span><span class="nl">Eenvoudig, persoonlijk en altijd met een mens die er met aandacht naar luistert.</span></p>
   </div>
   <div class="wrap">
     <div class="steps">
       <div class="step">
         <div class="n">1</div>
-        <h3><span class="nl">Vertel het verhaal</span><span class="en">Tell the story</span></h3>
-        <p><span class="nl">Voor wie, welke gelegenheid, de namen en mooiste herinneringen.</span><span class="en">Who it's for, the occasion, the names and best memories.</span></p>
+        <h3><span class="en">Tell the story</span><span class="nl">Vertel het verhaal</span></h3>
+        <p><span class="en">Who it's for, the occasion, the names and best memories.</span><span class="nl">Voor wie, welke gelegenheid, de namen en mooiste herinneringen.</span></p>
       </div>
       <div class="step">
         <div class="n">2</div>
-        <h3><span class="nl">Samen de songtekst</span><span class="en">The lyrics together</span></h3>
-        <p><span class="nl">Wij schrijven de tekst en jij keurt hem goed — pas daarna betaal je.</span><span class="en">We write the lyrics and you approve them — only then you pay.</span></p>
+        <h3><span class="en">The lyrics together</span><span class="nl">Samen de songtekst</span></h3>
+        <p><span class="en">We write the lyrics and you approve them — only then you pay.</span><span class="nl">Wij schrijven de tekst en jij keurt hem goed — pas daarna betaal je.</span></p>
       </div>
       <div class="step">
         <div class="n">3</div>
-        <h3><span class="nl">Wij maken het lied</span><span class="en">We make the song</span></h3>
-        <p><span class="nl">Een warm, persoonlijk lied in de sfeer die bij het moment past.</span><span class="en">A warm, personal song in the mood that fits the moment.</span></p>
+        <h3><span class="en">We make the song</span><span class="nl">Wij maken het lied</span></h3>
+        <p><span class="en">A warm, personal song in the mood that fits the moment.</span><span class="nl">Een warm, persoonlijk lied in de sfeer die bij het moment past.</span></p>
       </div>
       <div class="step">
         <div class="n">4</div>
-        <h3><span class="nl">Jij ontvangt het</span><span class="en">You receive it</span></h3>
-        <p><span class="nl">Het lied is van jou. Optioneel met cover en release op Spotify.</span><span class="en">The song is yours. Optionally with cover art and a Spotify release.</span></p>
+        <h3><span class="en">You receive it</span><span class="nl">Jij ontvangt het</span></h3>
+        <p><span class="en">The song is yours. Optionally with cover art and a Spotify release.</span><span class="nl">Het lied is van jou. Optioneel met cover en release op Spotify.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="prijzen" class="pricing">
+<section id="pricing" class="pricing">
   <div class="wrap center">
-    <div class="eyebrow2"><span class="nl">Twee opties</span><span class="en">Two options</span></div>
-    <h2><span class="nl">Kies wat bij je past</span><span class="en">Choose what fits</span></h2>
+    <div class="eyebrow2"><span class="en">Two options</span><span class="nl">Twee opties</span></div>
+    <h2><span class="en">Choose what fits</span><span class="nl">Kies wat bij je past</span></h2>
     <div class="rule"></div>
-    <p class="lead"><span class="nl">Alleen het lied voor jezelf, of compleet met cover en overal uitgebracht.</span><span class="en">Just the song for yourself, or complete with cover art and released everywhere.</span></p>
+    <p class="lead"><span class="en">Just the song for yourself, or complete with cover art and released everywhere.</span><span class="nl">Alleen het lied voor jezelf, of compleet met cover en overal uitgebracht.</span></p>
+    <div class="curswitch" role="group" aria-label="Currency">
+      <span class="curlabel"><span class="en">Currency:</span><span class="nl">Valuta:</span></span>
+      <button data-cur="eur">€ EUR</button>
+      <button data-cur="gbp" class="active">£ GBP</button>
+      <button data-cur="usd">$ USD</button>
+    </div>
   </div>
   <div class="wrap">
     <div class="cards">
       <div class="card">
-        <h3><span class="nl">Privé</span><span class="en">Private</span></h3>
-        <div class="price">€69 <small><span class="nl">incl. btw</span><span class="en">incl. VAT</span></small></div>
+        <h3><span class="en">Private</span><span class="nl">Privé</span></h3>
+        <div class="price"><span class="cur" data-eur="€69" data-gbp="£59" data-usd="$79">€69</span> <small><span class="en">incl. tax</span><span class="nl">incl. btw</span></small></div>
         <ul>
-          <li><span class="nl">Samen de songtekst, op maat</span><span class="en">Custom lyrics, written together</span></li>
-          <li><span class="nl">Jouw persoonlijke lied (bestand)</span><span class="en">Your personal song (audio file)</span></li>
-          <li><span class="nl">Privé — geen publicatie</span><span class="en">Private — no publishing</span></li>
-          <li><span class="nl">Ideaal achter een trouw- of herdenkingsvideo</span><span class="en">Perfect behind a wedding or memorial video</span></li>
+          <li><span class="en">Custom lyrics, written together</span><span class="nl">Samen de songtekst, op maat</span></li>
+          <li><span class="en">Your personal song (audio file)</span><span class="nl">Jouw persoonlijke lied (bestand)</span></li>
+          <li><span class="en">Private — no publishing</span><span class="nl">Privé — geen publicatie</span></li>
+          <li><span class="en">Perfect behind a wedding or memorial video</span><span class="nl">Ideaal achter een trouw- of herdenkingsvideo</span></li>
         </ul>
       </div>
       <div class="card feat">
-        <div class="badge"><span class="nl">Meest gekozen</span><span class="en">Most popular</span></div>
-        <h3><span class="nl">Compleet</span><span class="en">Complete</span></h3>
-        <div class="price">€89 <small><span class="nl">incl. btw</span><span class="en">incl. VAT</span></small></div>
+        <div class="badge"><span class="en">Most popular</span><span class="nl">Meest gekozen</span></div>
+        <h3><span class="en">Complete</span><span class="nl">Compleet</span></h3>
+        <div class="price"><span class="cur" data-eur="€89" data-gbp="£79" data-usd="$99">€89</span> <small><span class="en">incl. tax</span><span class="nl">incl. btw</span></small></div>
         <ul>
-          <li><span class="nl">Alles uit Privé</span><span class="en">Everything in Private</span></li>
-          <li><span class="nl">Persoonlijke cover (eigen foto kan)</span><span class="en">Personal cover art (your photo works)</span></li>
-          <li><span class="nl">Officieel uitgebracht op Spotify, Apple Music &amp; YouTube</span><span class="en">Officially released on Spotify, Apple Music &amp; YouTube</span></li>
-          <li><span class="nl">Voor altijd terug te luisteren &amp; te delen</span><span class="en">Yours to replay and share forever</span></li>
+          <li><span class="en">Everything in Private</span><span class="nl">Alles uit Privé</span></li>
+          <li><span class="en">Personal cover art (your photo works)</span><span class="nl">Persoonlijke cover (eigen foto kan)</span></li>
+          <li><span class="en">Officially released on Spotify, Apple Music &amp; YouTube</span><span class="nl">Officieel uitgebracht op Spotify, Apple Music &amp; YouTube</span></li>
+          <li><span class="en">Yours to replay and share forever</span><span class="nl">Voor altijd terug te luisteren &amp; te delen</span></li>
         </ul>
       </div>
     </div>
     <p class="note">
-      <span class="nl">Spoed binnen 24 uur: +€50. Standaard levertijd binnen 5 dagen. Niet blij? Geld terug. Prijzen in £/$ voor UK en VS/CA/AU op aanvraag.</span>
-      <span class="en">Rush within 24 hours: +€50. Standard delivery within 5 days. Not happy? Money back. Prices in £/$ for UK and US/CA/AU on request.</span>
+      <span class="en">Rush within 24 hours: <span class="cur" data-eur="+€50" data-gbp="+£45" data-usd="+$55">+€50</span>. Standard delivery within 5 days. Not happy? Money back.</span>
+      <span class="nl">Spoed binnen 24 uur: <span class="cur" data-eur="+€50" data-gbp="+£45" data-usd="+$55">+€50</span>. Standaard levertijd binnen 5 dagen. Niet blij? Geld terug.</span>
     </p>
   </div>
 </section>
 
 <section id="reviews">
   <div class="wrap center">
-    <div class="eyebrow2"><span class="nl">Wat mensen zeggen</span><span class="en">What people say</span></div>
-    <h2><span class="nl">Uit het hart, recht het hart in</span><span class="en">From the heart, straight to the heart</span></h2>
+    <div class="eyebrow2"><span class="en">What people say</span><span class="nl">Wat mensen zeggen</span></div>
+    <h2><span class="en">From the heart, straight to the heart</span><span class="nl">Uit het hart, recht het hart in</span></h2>
     <div class="rule"></div>
   </div>
   <div class="wrap">
     <div class="reviews">
       <div class="review">
-        <span class="nl">"Ik kreeg er kippenvel van. Precies de woorden die ik zelf nooit had kunnen vinden."</span>
         <span class="en">"It gave me goosebumps. Exactly the words I could never have found myself."</span>
+        <span class="nl">"Ik kreeg er kippenvel van. Precies de woorden die ik zelf nooit had kunnen vinden."</span>
         <span class="who">— Linda</span>
       </div>
       <div class="review">
-        <span class="nl">"Voor de bruiloft van mijn ouders. Iedereen in de zaal had tranen in de ogen."</span>
         <span class="en">"For my parents' wedding. Everyone in the room had tears in their eyes."</span>
+        <span class="nl">"Voor de bruiloft van mijn ouders. Iedereen in de zaal had tranen in de ogen."</span>
         <span class="who">— Mark</span>
       </div>
       <div class="review">
-        <span class="nl">"Een lied voor mijn moeder die we verloren. Het voelt alsof ze er nog even is."</span>
         <span class="en">"A song for the mother we lost. It feels like she's still here for a moment."</span>
+        <span class="nl">"Een lied voor mijn moeder die we verloren. Het voelt alsof ze er nog even is."</span>
         <span class="who">— Sanne</span>
       </div>
     </div>
@@ -161,38 +253,38 @@
   <div class="wrap">
     <div class="center">
       <div class="eyebrow2">FAQ</div>
-      <h2><span class="nl">Veelgestelde vragen</span><span class="en">Frequently asked</span></h2>
+      <h2><span class="en">Frequently asked</span><span class="nl">Veelgestelde vragen</span></h2>
       <div class="rule"></div>
     </div>
     <details>
-      <summary><span class="nl">Hoe lang duurt het?</span><span class="en">How long does it take?</span></summary>
-      <p><span class="nl">Standaard lever je lied binnen 5 dagen. Heb je het sneller nodig? Met spoed (+€50) heb je het binnen 24 uur.</span><span class="en">Standard delivery is within 5 days. Need it sooner? With rush (+€50) you'll have it within 24 hours.</span></p>
+      <summary><span class="en">How long does it take?</span><span class="nl">Hoe lang duurt het?</span></summary>
+      <p><span class="en">Standard delivery is within 5 days. Need it sooner? With rush you'll have it within 24 hours.</span><span class="nl">Standaard lever je lied binnen 5 dagen. Heb je het sneller nodig? Met spoed heb je het binnen 24 uur.</span></p>
     </details>
     <details>
-      <summary><span class="nl">Wanneer betaal ik?</span><span class="en">When do I pay?</span></summary>
-      <p><span class="nl">Pas nadat je de songtekst hebt goedgekeurd. Zo weet je vooraf precies wat er in je lied komt.</span><span class="en">Only after you've approved the lyrics. That way you know exactly what your song will say before you pay.</span></p>
+      <summary><span class="en">When do I pay?</span><span class="nl">Wanneer betaal ik?</span></summary>
+      <p><span class="en">Only after you've approved the lyrics. That way you know exactly what your song will say before you pay.</span><span class="nl">Pas nadat je de songtekst hebt goedgekeurd. Zo weet je vooraf precies wat er in je lied komt.</span></p>
     </details>
     <details>
-      <summary><span class="nl">Kan ik een eigen foto gebruiken voor de cover?</span><span class="en">Can I use my own photo for the cover?</span></summary>
-      <p><span class="nl">Ja. Bij de optie Compleet maken we de cover met jouw eigen foto, of we ontwerpen er een voor je.</span><span class="en">Yes. With the Complete option we make the cover with your own photo, or we design one for you.</span></p>
+      <summary><span class="en">Can I use my own photo for the cover?</span><span class="nl">Kan ik een eigen foto gebruiken voor de cover?</span></summary>
+      <p><span class="en">Yes. With the Complete option we make the cover with your own photo, or we design one for you.</span><span class="nl">Ja. Bij de optie Compleet maken we de cover met jouw eigen foto, of we ontwerpen er een voor je.</span></p>
     </details>
     <details>
-      <summary><span class="nl">En als ik niet blij ben?</span><span class="en">What if I'm not happy?</span></summary>
-      <p><span class="nl">Niet blij, geld terug. Omdat je eerst de tekst goedkeurt, zit je nooit vast aan iets dat niet klopt.</span><span class="en">Not happy, money back. Because you approve the lyrics first, you're never stuck with something that's off.</span></p>
+      <summary><span class="en">What if I'm not happy?</span><span class="nl">En als ik niet blij ben?</span></summary>
+      <p><span class="en">Not happy, money back. Because you approve the lyrics first, you're never stuck with something that's off.</span><span class="nl">Niet blij, geld terug. Omdat je eerst de tekst goedkeurt, zit je nooit vast aan iets dat niet klopt.</span></p>
     </details>
     <details>
-      <summary><span class="nl">Maken jullie ook liedjes voor een herdenking?</span><span class="en">Do you make songs for a memorial?</span></summary>
-      <p><span class="nl">Ja, met veel zorg. Neem gerust contact met ons op, dan kijken we samen hoe we het mooiste eerbetoon maken.</span><span class="en">Yes, with great care. Please reach out and we'll find the most fitting tribute together.</span></p>
+      <summary><span class="en">Do you make songs for a memorial?</span><span class="nl">Maken jullie ook liedjes voor een herdenking?</span></summary>
+      <p><span class="en">Yes, with great care. Please reach out and we'll find the most fitting tribute together.</span><span class="nl">Ja, met veel zorg. Neem gerust contact met ons op, dan kijken we samen hoe we het mooiste eerbetoon maken.</span></p>
     </details>
   </div>
 </section>
 
 <section id="contact" class="ctaband">
   <div class="wrap">
-    <h2><span class="nl">Klaar om jouw verhaal te vertellen?</span><span class="en">Ready to tell your story?</span></h2>
-    <p class="lead"><span class="nl">Stuur ons een bericht — we denken graag met je mee, zonder verplichtingen.</span><span class="en">Send us a message — we're happy to help, no strings attached.</span></p>
+    <h2><span class="en">Ready to tell your story?</span><span class="nl">Klaar om jouw verhaal te vertellen?</span></h2>
+    <p class="lead"><span class="en">Send us a message — we're happy to help, no strings attached.</span><span class="nl">Stuur ons een bericht — we denken graag met je mee, zonder verplichtingen.</span></p>
     <div class="btns">
-      <a class="btn" href="https://m.me/nomoclubmusic" target="_blank" rel="noopener"><span class="nl">Bericht via Messenger</span><span class="en">Message on Messenger</span></a>
+      <a class="btn" href="https://m.me/nomoclubmusic" target="_blank" rel="noopener"><span class="en">Message on Messenger</span><span class="nl">Bericht via Messenger</span></a>
       <a class="btn ghost" href="https://www.instagram.com/nomoclubmusic" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
@@ -202,12 +294,12 @@
   <div class="wrap">
     <div>
       <strong>NOMOCLUB MUSIC</strong><br>
-      <span style="opacity:.7;font-size:13px"><span class="nl">Een handelsmerk van Zonder Stropdas Company B.V.</span><span class="en">A trademark of Zonder Stropdas Company B.V.</span></span>
+      <span style="opacity:.7;font-size:13px"><span class="en">A trademark of Zonder Stropdas Company B.V.</span><span class="nl">Een handelsmerk van Zonder Stropdas Company B.V.</span></span>
     </div>
     <div>
-      <a href="index.html"><span class="nl">Home</span><span class="en">Home</span></a>
-      <a href="privacy.html"><span class="nl">Privacy</span><span class="en">Privacy</span></a>
-      <a href="terms.html"><span class="nl">Voorwaarden</span><span class="en">Terms</span></a>
+      <a href="index.html"><span class="en">Home</span><span class="nl">Home</span></a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html"><span class="en">Terms</span><span class="nl">Voorwaarden</span></a>
     </div>
   </div>
 </footer>
