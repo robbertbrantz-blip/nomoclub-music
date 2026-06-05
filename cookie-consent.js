@@ -1,6 +1,6 @@
 /* Simple cookie consent for nomoclub.com
    Loads GA4 + Meta Pixel ONLY after the visitor accepts.
-   No external libraries. */
+   Exposes window.nomoCookieSettings() to reopen the banner. No libraries. */
 (function () {
   var GA_ID    = 'G-E1K69RVQRL';
   var PIXEL_ID = '778038775303295';
@@ -13,8 +13,9 @@
     : { msg: 'We use cookies for analytics and advertising.',
         ok: 'Accept', no: 'Decline', more: 'Privacy policy' };
 
+  var loaded = false;
   function loadTrackers() {
-    // Google Analytics 4
+    if (loaded) return; loaded = true;
     var g = document.createElement('script');
     g.async = true;
     g.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -23,7 +24,6 @@
     window.gtag = function () { dataLayer.push(arguments); };
     gtag('js', new Date());
     gtag('config', GA_ID);
-    // Meta Pixel
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -39,13 +39,10 @@
   function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function get()  { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
 
-  var choice = get();
-  if (choice === 'accepted') { loadTrackers(); return; }
-  if (choice === 'declined') { return; }
-
-  // ---- build the banner ----
-  function build() {
+  function injectStyle() {
+    if (document.getElementById('nomo-cc-style')) return;
     var css = document.createElement('style');
+    css.id = 'nomo-cc-style';
     css.textContent =
       '#nomo-cc{position:fixed;left:0;right:0;bottom:0;z-index:99999;' +
       'background:#fff;border-top:1px solid #e5e5e5;box-shadow:0 -2px 12px rgba(0,0,0,.08);' +
@@ -59,7 +56,11 @@
       '#nomo-cc .ok{background:#c0392b;color:#fff}' +
       '#nomo-cc .no{background:#fff;color:#c0392b}';
     document.head.appendChild(css);
+  }
 
+  function build() {
+    if (document.getElementById('nomo-cc')) return;
+    injectStyle();
     var bar = document.createElement('div');
     bar.id = 'nomo-cc';
     bar.innerHTML =
@@ -69,11 +70,17 @@
       '<button class="ok" type="button">' + T.ok + '</button>' +
       '</div>';
     document.body.appendChild(bar);
-
     bar.querySelector('.ok').onclick = function () { save('accepted'); bar.remove(); loadTrackers(); };
     bar.querySelector('.no').onclick = function () { save('declined'); bar.remove(); };
   }
 
-  if (document.body) build();
-  else document.addEventListener('DOMContentLoaded', build);
+  function show() { if (document.body) build(); else document.addEventListener('DOMContentLoaded', build); }
+
+  // Footer link calls this to let visitors change their mind.
+  window.nomoCookieSettings = function () { try { localStorage.removeItem(KEY); } catch (e) {} show(); };
+
+  var choice = get();
+  if (choice === 'accepted') { loadTrackers(); return; }
+  if (choice === 'declined') { return; }
+  show();
 })();
