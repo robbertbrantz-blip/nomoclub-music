@@ -51,6 +51,8 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,13,24,.85);backdr
 .btn.outline:hover{border-color:var(--orange)}
 .btn.wa{background:#25D366;color:#fff;border:none}
 .btn.wa:hover{background:#1ebe5d}
+.btn.msg{background:#0084ff;color:#fff;border:none}
+.btn.msg:hover{background:#006fd6}
 .hero .btns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 .ctaband .btns{justify-content:center}
 
