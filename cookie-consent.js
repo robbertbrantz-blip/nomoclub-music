@@ -1,14 +1,15 @@
 /* Simple cookie consent for nomoclub.com
-   Loads GA4 + Meta Pixel ONLY after the visitor accepts.
-   Banner language follows the site language (localStorage 'nomoclub-lang', default en).
-   Exposes window.nomoCookieSettings() to reopen the banner. No libraries. */
+   - Loads GA4 + Meta Pixel ONLY after the visitor accepts.
+   - Banner language follows the site language (localStorage 'nomoclub-lang', default en).
+   - Tracks a "Contact" event when a contact channel is clicked (only if consent given).
+   - Exposes window.nomoCookieSettings() to reopen the banner. No libraries. */
 (function () {
   var GA_ID    = 'G-E1K69RVQRL';
   var PIXEL_ID = '778038775303295';
   var KEY      = 'nomo_cookie_consent';
 
   function texts() {
-    var nl = (function(){ try { return localStorage.getItem('nomoclub-lang') === 'nl'; } catch (e) { return false; } })();
+    var nl = (function () { try { return localStorage.getItem('nomoclub-lang') === 'nl'; } catch (e) { return false; } })();
     return nl
       ? { msg: 'We gebruiken cookies voor analyse en advertenties.',
           ok: 'Accepteren', no: 'Weigeren', more: 'Privacybeleid' }
@@ -41,6 +42,26 @@
 
   function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function get()  { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+
+  // ----- Contact event tracking (only fires once trackers are loaded = consent given) -----
+  function trackContact(method) {
+    if (window.fbq) { try { fbq('track', 'Contact', { method: method }); } catch (e) {} }
+    if (window.gtag) { try { gtag('event', 'contact', { method: method }); } catch (e) {} }
+  }
+  function setupContactTracking() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var m = null;
+      if (/wa\.me|api\.whatsapp|whatsapp\.com/i.test(href)) m = 'whatsapp';
+      else if (/m\.me|messenger\.com/i.test(href)) m = 'messenger';
+      else if (/instagram\.com/i.test(href)) m = 'instagram';
+      else if (/facebook\.com/i.test(href)) m = 'facebook';
+      else if (/^mailto:/i.test(href)) m = 'email';
+      if (m) trackContact(m);
+    }, true);
+  }
 
   function injectStyle() {
     if (document.getElementById('nomo-cc-style')) return;
@@ -80,7 +101,6 @@
     bar.id = 'nomo-cc';
     document.body.appendChild(bar);
     render(bar);
-    // Keep banner text in sync if the visitor switches site language.
     document.querySelectorAll('.langtoggle button').forEach(function (b) {
       b.addEventListener('click', function () {
         var open = document.getElementById('nomo-cc');
@@ -92,6 +112,8 @@
   function show() { if (document.body) build(); else document.addEventListener('DOMContentLoaded', build); }
 
   window.nomoCookieSettings = function () { try { localStorage.removeItem(KEY); } catch (e) {} show(); };
+
+  setupContactTracking();
 
   var choice = get();
   if (choice === 'accepted') { loadTrackers(); return; }
