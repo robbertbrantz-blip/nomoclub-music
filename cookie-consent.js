@@ -1,17 +1,20 @@
 /* Simple cookie consent for nomoclub.com
    Loads GA4 + Meta Pixel ONLY after the visitor accepts.
+   Banner language follows the site language (localStorage 'nomoclub-lang', default en).
    Exposes window.nomoCookieSettings() to reopen the banner. No libraries. */
 (function () {
   var GA_ID    = 'G-E1K69RVQRL';
   var PIXEL_ID = '778038775303295';
   var KEY      = 'nomo_cookie_consent';
 
-  var nl = (navigator.language || 'en').toLowerCase().indexOf('nl') === 0;
-  var T = nl
-    ? { msg: 'We gebruiken cookies voor analyse en advertenties.',
-        ok: 'Accepteren', no: 'Weigeren', more: 'Privacybeleid' }
-    : { msg: 'We use cookies for analytics and advertising.',
-        ok: 'Accept', no: 'Decline', more: 'Privacy policy' };
+  function texts() {
+    var nl = (function(){ try { return localStorage.getItem('nomoclub-lang') === 'nl'; } catch (e) { return false; } })();
+    return nl
+      ? { msg: 'We gebruiken cookies voor analyse en advertenties.',
+          ok: 'Accepteren', no: 'Weigeren', more: 'Privacybeleid' }
+      : { msg: 'We use cookies for analytics and advertising.',
+          ok: 'Accept', no: 'Decline', more: 'Privacy policy' };
+  }
 
   var loaded = false;
   function loadTrackers() {
@@ -58,25 +61,36 @@
     document.head.appendChild(css);
   }
 
-  function build() {
-    if (document.getElementById('nomo-cc')) return;
-    injectStyle();
-    var bar = document.createElement('div');
-    bar.id = 'nomo-cc';
+  function render(bar) {
+    var T = texts();
     bar.innerHTML =
       '<p>' + T.msg + ' <a href="privacy.html">' + T.more + '</a></p>' +
       '<div class="b">' +
       '<button class="no" type="button">' + T.no + '</button>' +
       '<button class="ok" type="button">' + T.ok + '</button>' +
       '</div>';
-    document.body.appendChild(bar);
     bar.querySelector('.ok').onclick = function () { save('accepted'); bar.remove(); loadTrackers(); };
     bar.querySelector('.no').onclick = function () { save('declined'); bar.remove(); };
   }
 
+  function build() {
+    if (document.getElementById('nomo-cc')) return;
+    injectStyle();
+    var bar = document.createElement('div');
+    bar.id = 'nomo-cc';
+    document.body.appendChild(bar);
+    render(bar);
+    // Keep banner text in sync if the visitor switches site language.
+    document.querySelectorAll('.langtoggle button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var open = document.getElementById('nomo-cc');
+        if (open) setTimeout(function () { render(open); }, 0);
+      });
+    });
+  }
+
   function show() { if (document.body) build(); else document.addEventListener('DOMContentLoaded', build); }
 
-  // Footer link calls this to let visitors change their mind.
   window.nomoCookieSettings = function () { try { localStorage.removeItem(KEY); } catch (e) {} show(); };
 
   var choice = get();
