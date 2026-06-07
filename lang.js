@@ -26,7 +26,7 @@
   });
 
   function setCurrency(cur, persist) {
-    if (['eur', 'gbp', 'usd'].indexOf(cur) === -1) cur = 'gbp';
+    if (['eur', 'gbp', 'usd', 'aud'].indexOf(cur) === -1) cur = 'gbp';
     document.querySelectorAll('.cur').forEach(function (el) {
       var v = el.getAttribute('data-' + cur);
       if (v) el.textContent = v;
