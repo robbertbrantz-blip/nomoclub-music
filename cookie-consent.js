@@ -1,7 +1,7 @@
-/* Simple cookie consent for nomoclub.com
+/* Cookie consent for nomoclub.com
    - Loads GA4 + Meta Pixel ONLY after the visitor accepts.
    - Banner language follows the site language (localStorage 'nomoclub-lang', default en).
-   - Tracks a "Contact" event when a contact channel is clicked (only if consent given).
+   - Fires a "Lead" event when a contact channel is clicked (only if consent given).
    - Exposes window.nomoCookieSettings() to reopen the banner. No libraries. */
 (function () {
   var GA_ID    = 'G-E1K69RVQRL';
@@ -43,12 +43,12 @@
   function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function get()  { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
 
-  // ----- Contact event tracking (only fires once trackers are loaded = consent given) -----
-  function trackContact(method) {
-    if (window.fbq) { try { fbq('track', 'Contact', { method: method }); } catch (e) {} }
-    if (window.gtag) { try { gtag('event', 'contact', { method: method }); } catch (e) {} }
+  // ----- Lead event (only fires once trackers are loaded = consent given) -----
+  function trackLead(method) {
+    if (window.fbq)  { try { fbq('track', 'Lead', { method: method }); } catch (e) {} }
+    if (window.gtag) { try { gtag('event', 'generate_lead', { method: method }); } catch (e) {} }
   }
-  function setupContactTracking() {
+  function setupLeadTracking() {
     document.addEventListener('click', function (e) {
       var a = e.target.closest ? e.target.closest('a[href]') : null;
       if (!a) return;
@@ -59,7 +59,7 @@
       else if (/instagram\.com/i.test(href)) m = 'instagram';
       else if (/facebook\.com/i.test(href)) m = 'facebook';
       else if (/^mailto:/i.test(href)) m = 'email';
-      if (m) trackContact(m);
+      if (m) trackLead(m);
     }, true);
   }
 
@@ -113,7 +113,7 @@
 
   window.nomoCookieSettings = function () { try { localStorage.removeItem(KEY); } catch (e) {} show(); };
 
-  setupContactTracking();
+  setupLeadTracking();
 
   var choice = get();
   if (choice === 'accepted') { loadTrackers(); return; }
