@@ -177,6 +177,6 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
   .foot-brand{flex-direction:column;text-align:center}
   .foot-links{justify-content:center}
   body{padding-bottom:78px}
-  .sticky-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:9px;background:#1877f2;color:#fff;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:40px;box-shadow:0 8px 24px rgba(0,0,0,.28);font-family:'Poppins','Inter',sans-serif;font-size:15px}
+  .sticky-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:9px;background:linear-gradient(135deg,#e8743b,#c0392b);color:#fff;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:40px;box-shadow:0 8px 24px rgba(120,40,30,.32);font-family:'Poppins','Inter',sans-serif;font-size:15px}
   .sticky-cta svg{flex:none}
 }
