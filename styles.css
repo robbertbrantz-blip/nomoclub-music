@@ -29,8 +29,8 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,13,24,.85);backdr
 .nav-right a{opacity:.85;text-decoration:none}
 .nav-right a:hover{opacity:1}
 .langtoggle{border:1px solid rgba(255,255,255,.3);border-radius:20px;overflow:hidden;display:flex}
-.langtoggle button{background:transparent;color:var(--cream);border:0;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer;opacity:.6}
-.langtoggle button.active{background:var(--gold);color:#2b1331;opacity:1}
+.langtoggle button,.langtoggle a{background:transparent;color:var(--cream);border:0;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer;opacity:.6;text-decoration:none;display:inline-block;line-height:1.4}
+.langtoggle button.active,.langtoggle a.active{background:var(--gold);color:#2b1331;opacity:1}
 
 .brandlink{text-decoration:none}
 /* hero */
