@@ -96,18 +96,18 @@ h2{font-size:clamp(24px,4vw,34px);font-weight:800;color:var(--deep);letter-spaci
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;position:relative;box-shadow:0 8px 30px rgba(120,40,30,.06)}
 .card.feat{border:2px solid var(--orange)}
-.badge{position:absolute;top:-12px;right:22px;background:var(--orange);color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.04em}
+.badge{position:absolute;top:-12px;right:22px;background:var(--orange);color:#2b1331;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.04em}
 .card h3{font-size:20px;color:var(--deep)}
 .price{font-size:40px;font-weight:800;color:var(--red);margin:8px 0 2px}
-.price small{font-size:15px;color:#8a7884;font-weight:600}
+.price small{font-size:15px;color:#6a5a62;font-weight:600}
 .card ul{list-style:none;margin:16px 0 0}
 .card li{padding-left:26px;position:relative;margin-bottom:9px;font-size:15px;color:#43363f}
 .card li:before{content:"♪";position:absolute;left:0;color:var(--orange);font-weight:800}
-.note{font-size:13px;color:#8a7884;margin-top:26px;text-align:center}
+.note{font-size:13px;color:#6a5a62;margin-top:26px;text-align:center}
 /* currency switch */
 .curswitch{display:inline-flex;align-items:center;gap:6px;margin-top:22px;flex-wrap:wrap;justify-content:center}
 body:not(.lang-en) .curswitch{display:none}
-.curlabel{font-size:13px;color:#8a7884;font-weight:600;margin-right:4px}
+.curlabel{font-size:13px;color:#6a5a62;font-weight:600;margin-right:4px}
 .curswitch button{background:#fff;border:1px solid var(--line);color:#5a3b46;font-weight:700;font-size:13px;padding:7px 13px;border-radius:30px;cursor:pointer;transition:.15s}
 .curswitch button:hover{border-color:var(--orange)}
 .curswitch button.active{background:var(--orange);color:#2b1331;border-color:var(--orange)}
