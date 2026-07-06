@@ -128,7 +128,7 @@ body:not(.lang-en) .curswitch{display:none}
 /* cta band */
 .ctaband{background:radial-gradient(120% 130% at 50% 0%,#e8743b,#c0392b 45%,#7a1f3d 100%);color:var(--cream);text-align:center}
 .ctaband h2{color:#fff}
-.ctaband .lead{color:#fce4d4}
+.ctaband .lead{color:#fce4d4;margin-left:auto;margin-right:auto}
 
 /* examples */
 .examples{background:linear-gradient(180deg,#fbf0e7 0,#fff 100%)}
