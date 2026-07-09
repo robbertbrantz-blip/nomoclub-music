@@ -313,7 +313,21 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
       }
     }
   ]
-}</script></head>
+}</script><style>
+/* --- mobiel hamburgermenu --- */
+.nav .wrap{position:relative}
+.navburger{display:none;order:3;background:none;border:0;color:var(--cream);cursor:pointer;padding:6px;line-height:0}
+@media(max-width:780px){
+  .navburger{display:inline-flex;align-items:center}
+  .nav-right a{display:none}
+  body.navopen .nav-right{position:absolute;top:64px;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;background:#241320;padding:8px 22px 18px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  body.navopen .nav-right a{display:block;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:16px}
+  body.navopen .nav-right .langtoggle{margin-top:14px;align-self:flex-start}
+  body.navopen.lang-en .nav-right a.nl{display:none}
+  body.navopen:not(.lang-en) .nav-right a.en{display:none}
+}
+</style>
+</head>
 <body class="lang-nl">
 <header class="nav">
 <div class="wrap">
@@ -321,6 +335,7 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
 <img alt="Nomoclub Music logo" height="40" src="logo.png" width="40"/>
 <span class="brand">NOMOCLUB<small>MUSIC</small></span>
 </a>
+<button aria-expanded="false" aria-label="Menu" class="navburger" type="button"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="26"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
 <div class="nav-right">
 <a class="hidemob" href="#how"><span class="nl">Hoe het werkt</span></a>
 <a class="hidemob" href="#pricing"><span class="nl">Prijzen</span></a>

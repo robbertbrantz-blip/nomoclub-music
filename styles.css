@@ -180,3 +180,16 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
   .sticky-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:9px;background:linear-gradient(135deg,#e8743b,#c0392b);color:#fff;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:40px;box-shadow:0 8px 24px rgba(120,40,30,.32);font-family:'Poppins','Inter',sans-serif;font-size:15px}
   .sticky-cta svg{flex:none}
 }
+
+/* --- mobiel hamburgermenu --- */
+.nav .wrap{position:relative}
+.navburger{display:none;order:3;background:none;border:0;color:var(--cream);cursor:pointer;padding:6px;line-height:0}
+@media(max-width:780px){
+  .navburger{display:inline-flex;align-items:center}
+  .nav-right a{display:none}
+  body.navopen .nav-right{position:absolute;top:64px;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;background:#241320;padding:8px 22px 18px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  body.navopen .nav-right a{display:block;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:16px}
+  body.navopen .nav-right .langtoggle{margin-top:14px;align-self:flex-start}
+  body.navopen.lang-en .nav-right a.nl{display:none}
+  body.navopen:not(.lang-en) .nav-right a.en{display:none}
+}

@@ -1,4 +1,12 @@
 (function () {
+  /* ---------- mobiel hamburgermenu ---------- */
+  document.querySelectorAll('.navburger').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var open = document.body.classList.toggle('navopen');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
   /* ---------- click-to-play YouTube player (all pages) ---------- */
   /* No YouTube cookies are set until the visitor presses play. */
   document.querySelectorAll('.ytfacade').forEach(function (f) {
