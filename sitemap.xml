@@ -6,7 +6,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nomoclub.com/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nomoclub.com/nl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nomoclub.com/"/>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nomoclub.com/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nomoclub.com/nl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nomoclub.com/"/>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,8 +33,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nomoclub.com/stories"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nomoclub.com/verhalen"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nomoclub.com/stories"/>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nomoclub.com/afscheidslied</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
