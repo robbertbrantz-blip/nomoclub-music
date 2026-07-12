@@ -49,7 +49,7 @@
   var toggleButtons = document.querySelectorAll('.langtoggle button');
 
   if (toggleLinks.length) {
-    /* ---------- single-language pages: / (EN) and /nl.html (NL) ---------- */
+    /* ---------- single-language pages: / (EN) and /nl (NL) ---------- */
     // Remember the visitor's explicit language choice when they switch.
     toggleLinks.forEach(function (a) {
       a.addEventListener('click', function () {
@@ -62,12 +62,14 @@
       setCurrency(localStorage.getItem('nomoclub-cur') || 'gbp', false);
     }
 
-    // Gentle one-time redirect: a Dutch-language browser landing on the English
-    // root goes to the Dutch page — unless the visitor already chose a language.
+    // Gentle redirect on the English root: go to the Dutch page when the
+    // visitor explicitly chose Dutch earlier, or when a Dutch-language browser
+    // arrives without any saved language choice.
     var p = location.pathname;
     var isRoot = (p === '/' || p === '' || /\/index\.html$/.test(p));
-    if (isEnglish && isRoot && !localStorage.getItem('nomoclub-lang') && detectDutch()) {
-      location.replace('/nl.html');
+    var savedPref = localStorage.getItem('nomoclub-lang');
+    if (isEnglish && isRoot && (savedPref === 'nl' || (!savedPref && detectDutch()))) {
+      location.replace('/nl');
     }
   } else if (toggleButtons.length) {
     /* ---------- legacy bilingual pages: privacy.html, terms.html ---------- */
