@@ -54,16 +54,6 @@
     document.cookie = 'nomoclub-lang=' + lang + '; path=/; max-age=31536000; SameSite=Lax';
   }
 
-  /* Mirror an older localStorage-only choice into the cookie (one-off). */
-  (function () {
-    var stored;
-    try { stored = localStorage.getItem('nomoclub-lang'); } catch (e) {}
-    if ((stored === 'nl' || stored === 'en') &&
-        document.cookie.indexOf('nomoclub-lang=') === -1) {
-      rememberLang(stored);
-    }
-  })();
-
   var toggleLinks = document.querySelectorAll('.langtoggle a');
   var toggleButtons = document.querySelectorAll('.langtoggle button');
 
@@ -95,7 +85,7 @@
     var savedLang = localStorage.getItem('nomoclub-lang');
     if (savedLang !== 'nl' && savedLang !== 'en') savedLang = detectDutch() ? 'nl' : 'en';
 
-    function setLang(lang) {
+    function setLang(lang, explicit) {
       if (lang !== 'nl') lang = 'en';
       document.body.classList.toggle('lang-en', lang === 'en');
       document.body.classList.toggle('lang-nl', lang === 'nl');
@@ -103,12 +93,15 @@
       toggleButtons.forEach(function (b) {
         b.classList.toggle('active', b.getAttribute('data-lang') === lang);
       });
-      rememberLang(lang);
+      /* Only an explicit click counts as a language choice: an auto-detected
+         language must not write the cookie the edge redirect looks at. */
+      try { localStorage.setItem('nomoclub-lang', lang); } catch (e) {}
+      if (explicit) rememberLang(lang);
       setCurrency(lang === 'nl' ? 'eur' : (localStorage.getItem('nomoclub-cur') || 'gbp'), lang !== 'nl');
     }
     toggleButtons.forEach(function (b) {
-      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang'), true); });
     });
-    setLang(savedLang);
+    setLang(savedLang, false);
   }
 })();
