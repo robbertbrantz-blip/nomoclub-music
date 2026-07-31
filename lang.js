@@ -45,6 +45,25 @@
     return list.some(function (l) { return (l || '').toLowerCase().indexOf('nl') === 0; });
   }
 
+  /* Remember the language choice in BOTH localStorage and a cookie.
+     The cookie is what Cloudflare can read at the edge, so an explicit
+     English choice survives the server-side redirect on the root URL. */
+  function rememberLang(lang) {
+    if (lang !== 'nl' && lang !== 'en') return;
+    try { localStorage.setItem('nomoclub-lang', lang); } catch (e) {}
+    document.cookie = 'nomoclub-lang=' + lang + '; path=/; max-age=31536000; SameSite=Lax';
+  }
+
+  /* Mirror an older localStorage-only choice into the cookie (one-off). */
+  (function () {
+    var stored;
+    try { stored = localStorage.getItem('nomoclub-lang'); } catch (e) {}
+    if ((stored === 'nl' || stored === 'en') &&
+        document.cookie.indexOf('nomoclub-lang=') === -1) {
+      rememberLang(stored);
+    }
+  })();
+
   var toggleLinks = document.querySelectorAll('.langtoggle a');
   var toggleButtons = document.querySelectorAll('.langtoggle button');
 
@@ -53,7 +72,7 @@
     // Remember the visitor's explicit language choice when they switch.
     toggleLinks.forEach(function (a) {
       a.addEventListener('click', function () {
-        localStorage.setItem('nomoclub-lang', a.getAttribute('data-lang'));
+        rememberLang(a.getAttribute('data-lang'));
       });
     });
 
@@ -84,7 +103,7 @@
       toggleButtons.forEach(function (b) {
         b.classList.toggle('active', b.getAttribute('data-lang') === lang);
       });
-      localStorage.setItem('nomoclub-lang', lang);
+      rememberLang(lang);
       setCurrency(lang === 'nl' ? 'eur' : (localStorage.getItem('nomoclub-cur') || 'gbp'), lang !== 'nl');
     }
     toggleButtons.forEach(function (b) {
