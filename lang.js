@@ -58,7 +58,7 @@
   var toggleButtons = document.querySelectorAll('.langtoggle button');
 
   if (toggleLinks.length) {
-    /* ---------- single-language pages: / (EN) and /nl (NL) ---------- */
+    /* ---------- single-language pages: / (NL) and /en (EN) ---------- */
     // Remember the visitor's explicit language choice when they switch.
     toggleLinks.forEach(function (a) {
       a.addEventListener('click', function () {
@@ -71,14 +71,17 @@
       setCurrency(localStorage.getItem('nomoclub-cur') || 'gbp', false);
     }
 
-    // Gentle redirect on the English root: go to the Dutch page when the
-    // visitor explicitly chose Dutch earlier, or when a Dutch-language browser
-    // arrives without any saved language choice.
+    // Dutch is the primary language and lives on the root. We only redirect on
+    // an EXPLICIT earlier language choice - never on browser detection - so that
+    // crawlers (which carry no preference) always see the page they requested.
     var p = location.pathname;
     var isRoot = (p === '/' || p === '' || /\/index\.html$/.test(p));
+    var isEnRoot = (p === '/en' || /\/en\.html$/.test(p));
     var savedPref = localStorage.getItem('nomoclub-lang');
-    if (isEnglish && isRoot && (savedPref === 'nl' || (!savedPref && detectDutch()))) {
-      location.replace('/nl');
+    if (!isEnglish && isRoot && savedPref === 'en') {
+      location.replace('/en');
+    } else if (isEnglish && isEnRoot && savedPref === 'nl') {
+      location.replace('/');
     }
   } else if (toggleButtons.length) {
     /* ---------- legacy bilingual pages: privacy.html, terms.html ---------- */
