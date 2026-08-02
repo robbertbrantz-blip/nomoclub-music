@@ -404,7 +404,7 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 </style>
 <style id="hart">
 /* ===== Blok 1: uit het hart ===== */
-.hartblok{padding:64px 0 52px}
+.hartblok{padding:64px 0 62px}
 .heartgrid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;text-align:left;margin-top:30px}
 .heartlist{list-style:none;margin:0;padding:28px 30px;
   background:linear-gradient(158deg,#fff 0%,#fff5ec 62%,#ffeee2 100%);
@@ -417,41 +417,23 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e8743b' d='M12 21.6l-1.45-1.32C5.4 15.86 2 12.79 2 9.03 2 5.96 4.42 3.6 7.5 3.6c1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.36 5.5 5.43 0 3.76-3.4 6.83-8.55 11.26L12 21.6z'/%3E%3C/svg%3E") no-repeat center/contain}
 .heartlist li.self{margin-top:18px;padding-top:18px;border-top:1px solid #f2ddcc;font-style:italic;color:#7a6570}
 .heartlist li.self:before{opacity:.5}
+.heartcopy{max-width:520px}
 .heartintro{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
   font-size:19px;line-height:1.7;color:#554A50}
-
-/* ===== Blok 2: voor wie ===== */
-.forwho{background:#fff;padding:54px 0 62px}
-.forwho-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:48px;align-items:center}
-.fw-lead{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
-  font-size:18px;line-height:1.68;color:#554A50}
-.fw-ode{margin-top:22px;padding-left:20px;border-left:3px solid var(--orange);
+.heartode{margin-top:22px;padding-left:20px;border-left:3px solid var(--orange);
   font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
   font-size:20px;line-height:1.55;color:var(--deep)}
-.pathstack{display:grid;gap:16px}
-.path{background:linear-gradient(158deg,#fffaf6 0%,#fff3e9 100%);border:1px solid #f2ddcc;
-  border-radius:18px;padding:24px 26px;box-shadow:0 10px 30px rgba(150,60,40,.07)}
-.path p{margin:0;font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
-  font-size:17px;line-height:1.65;color:#554A50}
-.path .q{display:block;color:var(--deep);font-weight:600;margin-bottom:7px}
-.path a{color:var(--red);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
-.path a:hover{color:var(--orange)}
 
 @media(max-width:860px){
   .hartblok{padding:48px 0 40px}
   .heartgrid{grid-template-columns:1fr;gap:26px;margin-top:24px}
   .heartlist{padding:24px 24px}
-  .heartintro{max-width:none}
-  .forwho{padding:42px 0 48px}
-  .forwho-grid{grid-template-columns:1fr;gap:26px}
+  .heartcopy{max-width:none}
 }
 @media(max-width:640px){
   .heartlist li{font-size:17.5px;padding-left:30px}
   .heartintro{font-size:17px}
-  .fw-lead{font-size:17px}
-  .fw-ode{font-size:18.5px;margin-top:18px;padding-left:16px}
-  .path{padding:20px 22px}
-  .path p{font-size:16.5px}
+  .heartode{font-size:18.5px;margin-top:18px;padding-left:16px}
 }
 .nudge{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
   font-size:21px;line-height:1.5;letter-spacing:-.005em;color:var(--deep);text-wrap:balance}
@@ -509,19 +491,10 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <li><span class="nl">Dank je wel voor wie je voor mij bent.</span></li>
 <li class="self"><span class="nl">Of misschien wil je iets liefs tegen jezelf zeggen.</span></li>
 </ul>
-<p class="heartintro"><span class="nl">Soms zijn de belangrijkste woorden ook de moeilijkste om uit te spreken. In een persoonlijk lied krijgen ze een stem — met jouw verhaal, jouw herinneringen en jouw gevoel.</span></p>
+<div class="heartcopy">
+<p class="heartintro"><span class="nl">Een lied dat zegt wat in je hart leeft mag zijn. Ben je ongeneeslijk ziek en wil je nog iets achterlaten wat werkelijk belangrijk is voor jou. Heb je een uitvaart en schieten woorden tekort? Of wil je een liefdevolle herinnering aan iemand die niet meer naast je staat, maar voor altijd met je verbonden blijft.</span></p>
+<p class="heartode"><span class="nl">Een ode aan het leven en aan de liefde die blijft.</span></p>
 </div>
-</div>
-</section>
-<section class="forwho">
-<div class="wrap forwho-grid">
-<div class="fw-text">
-<p class="fw-lead"><span class="nl">Voor iemand die ongeneeslijk ziek is en nog wil zeggen wat werkelijk belangrijk is. Voor wie voelt dat de tijd samen kostbaarder wordt en het afscheid dichterbij komt. Voor een uitvaart, wanneer woorden tekortschieten. Of als liefdevolle herinnering aan iemand die niet meer naast je staat, maar voor altijd met je verbonden blijft.</span></p>
-<p class="fw-ode"><span class="nl">Een ode aan wie iemand is of was. Aan alles wat jullie deelden, aan het leven en aan de liefde die blijft.</span></p>
-</div>
-<div class="pathstack">
-<div class="path"><p><span class="nl"><span class="q">Is iemand overleden en wil je diegene eren met een persoonlijk lied?</span> Een <a href="/afscheidslied">afscheidslied</a> bewaart herinneringen, woorden en gevoelens in muziek.</span></p></div>
-<div class="path"><p><span class="nl"><span class="q">Komt een <a href="/sterfdag-herdenken">sterfdag</a> dichterbij?</span> Een persoonlijk lied kan ruimte geven aan alles wat opnieuw voelbaar wordt: het gemis, de herinneringen en de liefde die nog altijd aanwezig is.</span></p></div>
 </div>
 </div>
 </section>
