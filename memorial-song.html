@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="styles.css">
 <style>
 .storyhero{background:radial-gradient(120% 130% at 50% 0%,#e8743b,#c0392b 45%,#7a1f3d 100%);color:var(--cream);text-align:center;padding:60px 0 56px}
@@ -56,6 +56,73 @@ h2.sec{font-size:clamp(23px,3vw,30px);line-height:1.25;letter-spacing:-.35px;col
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Custom Memorial Song — A Tribute From Your Story | Nomoclub Music","url":"https://nomoclub.com/memorial-song","inLanguage":"en","description":"Have a custom memorial song made from your memories — for a funeral, celebration of life or remembrance. Hear a free sample first.","isPartOf":{"@type":"WebSite","name":"Nomoclub Music","url":"https://nomoclub.com/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How quickly can a memorial song be ready?","acceptedAnswer":{"@type":"Answer","text":"Standard delivery is within 5 days. Is the funeral sooner? With rush delivery your memorial song is ready within 24 hours (+€50 / £45 / $55)."}},{"@type":"Question","name":"Can the song be played at the funeral or memorial service?","acceptedAnswer":{"@type":"Answer","text":"Yes. You receive the song as an audio file you can play at the funeral, cremation or celebration of life, and it also works beautifully behind a memorial video."}},{"@type":"Question","name":"What does a custom memorial song cost?","acceptedAnswer":{"@type":"Answer","text":"Just for You (a private audio file) costs €69 / £59 / $79 incl. tax. For the World (with cover art and a release on Spotify, Apple Music and YouTube) costs €89 / £79 / $99 incl. tax. You hear a free sample first and only pay after."}},{"@type":"Question","name":"What do I need to provide?","acceptedAnswer":{"@type":"Answer","text":"Just your story: memories, character traits, the moments you will never forget. In your own words — it does not have to be perfect. Feel free to mention the music that fits them."}},{"@type":"Question","name":"Can a memorial song be made while someone is still with us?","acceptedAnswer":{"@type":"Answer","text":"Yes, it happens more often than you would think. A song made while there is still time together — to listen to together, and to carry a gentle goodbye later."}}]}</script>
+<style id="typo">
+/* ===== Typografie: Lora voor koppen, Inter voor de rest ===== */
+h1,h2,h2.sec,.hero h1,.storyhero h1,.legal-wrap h1,.legal-wrap h2,.ctaband h2,.nudge{
+  font-family:'Lora',Georgia,'Times New Roman',serif;font-weight:700;text-wrap:balance}
+h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:52px;line-height:1.08;letter-spacing:-.025em}
+h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:34px;line-height:1.18;letter-spacing:-.015em;margin:8px 0 14px}
+.nudge{font-size:27px;line-height:1.3;letter-spacing:-.015em}
+
+h3,.step h3,.card h3,.song h3{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:18px;line-height:1.4;letter-spacing:-.01em}
+
+/* hero-intro */
+.hero .tag,.storyhero .lead{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.55}
+
+/* korte gevoelszinnen */
+.feel{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.75;text-align:center;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* gewone alinea's */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review{
+  font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:18px;line-height:1.65}
+.step p,.song p,.note,.foot-sub{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:16px;line-height:1.65}
+
+/* leeskolom: max 680px, gecentreerd */
+.lead,.sublead,.secsub,.prose,.steps-simple,.faqblock,.player-wrap{max-width:680px}
+.center .lead,.center .sublead,.center .feel{margin-left:auto;margin-right:auto}
+.center .para{max-width:680px;margin-left:auto;margin-right:auto;text-align:left}
+
+/* kleur bodytekst */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.step p,.song p,.feel{color:#554A50}
+/* donkere vlakken houden hun lichte tekst */
+.hero .tag{color:#fce4d4}
+.storyhero .lead{color:#fce4d4}
+.ctaband .lead{color:#fce4d4}
+/* koppen op lichte achtergrond: donkerpaars blijft */
+h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
+.ctaband h2{color:#fff}
+.storyhero h1{color:#fff}
+
+/* kleine uppercase bovenkopjes */
+.eyebrow,.eyebrow2,.hero .eyebrow,.storyhero .eyebrow{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+
+/* navigatie */
+.nav-right,.nav-right a,.foot-links,.foot-links a,.foot-mail{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500;font-size:14px}
+
+/* knoppen */
+.btn,.sticky-cta,.langtoggle button,.langtoggle a,.curswitch button{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+.btn,.sticky-cta{font-size:15px}
+
+/* Inter heeft geen 800 geladen: normaliseer naar 700 */
+.brand,.price,.badge,.step .n,.foot-brand strong,.faq summary,.faq summary:after,.card li:before,.faqblock summary{font-weight:700}
+.faq summary,.faqblock summary{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.45}
+
+/* tablet */
+@media(max-width:1024px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:44px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:32px}
+  .nudge{font-size:25px}
+}
+/* mobiel */
+@media(max-width:640px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:38px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:29px}
+  .nudge{font-size:22px}
+  .lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.hero .tag,.storyhero .lead,.faq summary,.faqblock summary{font-size:17px}
+  .feel{font-size:17.5px}
+  .h1brk{display:none}
+}
+</style>
 </head>
 <body class="lang-en">
 

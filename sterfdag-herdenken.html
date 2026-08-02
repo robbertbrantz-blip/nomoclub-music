@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="styles.css">
 <style>
 .storyhero{background:radial-gradient(120% 130% at 50% 0%,#e8743b,#c0392b 45%,#7a1f3d 100%);color:var(--cream);text-align:center;padding:60px 0 56px}
@@ -52,6 +52,73 @@ h2.sec{font-size:clamp(23px,3vw,30px);line-height:1.25;letter-spacing:-.35px;col
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Sterfdag herdenken", "url": "https://nomoclub.com/sterfdag-herdenken", "inLanguage": "nl", "description": "Hoe herdenk je iemand op zijn sterfdag? Ideeën, teksten die je kunt sturen en muziek — van iemand die het zelf meemaakte.", "author": {"@type": "Person", "name": "Robbert Brantz"}, "publisher": {"@type": "Organization", "name": "Nomoclub Music", "url": "https://nomoclub.com/"}, "isPartOf": {"@type": "WebSite", "name": "Nomoclub Music", "url": "https://nomoclub.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat zeg je op een herdenking of sterfdag?", "acceptedAnswer": {"@type": "Answer", "text": "Noem de naam. Dat is het belangrijkste. “Een kaarsje brandt voor Alice” is genoeg, en een hartje eronder ook. Spreek vanuit jezelf — niet “wat erg voor je”, maar “ik mis haar ook”."}}, {"@type": "Question", "name": "Hoe kan ik de sterfdatum van een dierbare herdenken?", "acceptedAnswer": {"@type": "Answer", "text": "Alles is goed. Foto’s kijken, koken wat zij altijd maakte, naar de plek gaan, een berichtje in de familie-app, of stilstaan en verder niets. Wat bij jou past, is de goede manier."}}, {"@type": "Question", "name": "Wat is een mooie tekst om iemand te herdenken?", "acceptedAnswer": {"@type": "Answer", "text": "De korte werken het best. “Een kaarsje brandt voor Alice.” “Ze is niet vergeten.” “Vandaag is haar naam genoemd.” Verderop op deze pagina staan er meer, om over te nemen."}}, {"@type": "Question", "name": "Wat zeg je na een sterfdag van één jaar?", "acceptedAnswer": {"@type": "Answer", "text": "Precies hetzelfde als op de dag zelf, en dat is juist de bedoeling. Na een jaar ontstaat er meer ruimte om ermee om te kunnen gaan."}}]}</script>
+<style id="typo">
+/* ===== Typografie: Lora voor koppen, Inter voor de rest ===== */
+h1,h2,h2.sec,.hero h1,.storyhero h1,.legal-wrap h1,.legal-wrap h2,.ctaband h2,.nudge{
+  font-family:'Lora',Georgia,'Times New Roman',serif;font-weight:700;text-wrap:balance}
+h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:52px;line-height:1.08;letter-spacing:-.025em}
+h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:34px;line-height:1.18;letter-spacing:-.015em;margin:8px 0 14px}
+.nudge{font-size:27px;line-height:1.3;letter-spacing:-.015em}
+
+h3,.step h3,.card h3,.song h3{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:18px;line-height:1.4;letter-spacing:-.01em}
+
+/* hero-intro */
+.hero .tag,.storyhero .lead{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.55}
+
+/* korte gevoelszinnen */
+.feel{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.75;text-align:center;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* gewone alinea's */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review{
+  font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:18px;line-height:1.65}
+.step p,.song p,.note,.foot-sub{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:16px;line-height:1.65}
+
+/* leeskolom: max 680px, gecentreerd */
+.lead,.sublead,.secsub,.prose,.steps-simple,.faqblock,.player-wrap{max-width:680px}
+.center .lead,.center .sublead,.center .feel{margin-left:auto;margin-right:auto}
+.center .para{max-width:680px;margin-left:auto;margin-right:auto;text-align:left}
+
+/* kleur bodytekst */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.step p,.song p,.feel{color:#554A50}
+/* donkere vlakken houden hun lichte tekst */
+.hero .tag{color:#fce4d4}
+.storyhero .lead{color:#fce4d4}
+.ctaband .lead{color:#fce4d4}
+/* koppen op lichte achtergrond: donkerpaars blijft */
+h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
+.ctaband h2{color:#fff}
+.storyhero h1{color:#fff}
+
+/* kleine uppercase bovenkopjes */
+.eyebrow,.eyebrow2,.hero .eyebrow,.storyhero .eyebrow{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+
+/* navigatie */
+.nav-right,.nav-right a,.foot-links,.foot-links a,.foot-mail{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500;font-size:14px}
+
+/* knoppen */
+.btn,.sticky-cta,.langtoggle button,.langtoggle a,.curswitch button{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+.btn,.sticky-cta{font-size:15px}
+
+/* Inter heeft geen 800 geladen: normaliseer naar 700 */
+.brand,.price,.badge,.step .n,.foot-brand strong,.faq summary,.faq summary:after,.card li:before,.faqblock summary{font-weight:700}
+.faq summary,.faqblock summary{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.45}
+
+/* tablet */
+@media(max-width:1024px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:44px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:32px}
+  .nudge{font-size:25px}
+}
+/* mobiel */
+@media(max-width:640px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:38px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:29px}
+  .nudge{font-size:22px}
+  .lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.hero .tag,.storyhero .lead,.faq summary,.faqblock summary{font-size:17px}
+  .feel{font-size:17.5px}
+  .h1brk{display:none}
+}
+</style>
 </head>
 <body class="lang-nl">
 

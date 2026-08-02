@@ -9,8 +9,75 @@
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="styles.css">
+<style id="typo">
+/* ===== Typografie: Lora voor koppen, Inter voor de rest ===== */
+h1,h2,h2.sec,.hero h1,.storyhero h1,.legal-wrap h1,.legal-wrap h2,.ctaband h2,.nudge{
+  font-family:'Lora',Georgia,'Times New Roman',serif;font-weight:700;text-wrap:balance}
+h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:52px;line-height:1.08;letter-spacing:-.025em}
+h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:34px;line-height:1.18;letter-spacing:-.015em;margin:8px 0 14px}
+.nudge{font-size:27px;line-height:1.3;letter-spacing:-.015em}
+
+h3,.step h3,.card h3,.song h3{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:18px;line-height:1.4;letter-spacing:-.01em}
+
+/* hero-intro */
+.hero .tag,.storyhero .lead{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.55}
+
+/* korte gevoelszinnen */
+.feel{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.75;text-align:center;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* gewone alinea's */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review{
+  font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:18px;line-height:1.65}
+.step p,.song p,.note,.foot-sub{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:16px;line-height:1.65}
+
+/* leeskolom: max 680px, gecentreerd */
+.lead,.sublead,.secsub,.prose,.steps-simple,.faqblock,.player-wrap{max-width:680px}
+.center .lead,.center .sublead,.center .feel{margin-left:auto;margin-right:auto}
+.center .para{max-width:680px;margin-left:auto;margin-right:auto;text-align:left}
+
+/* kleur bodytekst */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.step p,.song p,.feel{color:#554A50}
+/* donkere vlakken houden hun lichte tekst */
+.hero .tag{color:#fce4d4}
+.storyhero .lead{color:#fce4d4}
+.ctaband .lead{color:#fce4d4}
+/* koppen op lichte achtergrond: donkerpaars blijft */
+h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
+.ctaband h2{color:#fff}
+.storyhero h1{color:#fff}
+
+/* kleine uppercase bovenkopjes */
+.eyebrow,.eyebrow2,.hero .eyebrow,.storyhero .eyebrow{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+
+/* navigatie */
+.nav-right,.nav-right a,.foot-links,.foot-links a,.foot-mail{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500;font-size:14px}
+
+/* knoppen */
+.btn,.sticky-cta,.langtoggle button,.langtoggle a,.curswitch button{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+.btn,.sticky-cta{font-size:15px}
+
+/* Inter heeft geen 800 geladen: normaliseer naar 700 */
+.brand,.price,.badge,.step .n,.foot-brand strong,.faq summary,.faq summary:after,.card li:before,.faqblock summary{font-weight:700}
+.faq summary,.faqblock summary{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.45}
+
+/* tablet */
+@media(max-width:1024px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:44px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:32px}
+  .nudge{font-size:25px}
+}
+/* mobiel */
+@media(max-width:640px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:38px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:29px}
+  .nudge{font-size:22px}
+  .lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.hero .tag,.storyhero .lead,.faq summary,.faqblock summary{font-size:17px}
+  .feel{font-size:17.5px}
+  .h1brk{display:none}
+}
+</style>
 </head>
 <body class="lang-en">
 

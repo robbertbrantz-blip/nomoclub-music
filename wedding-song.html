@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@700&amp;display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="styles.css">
 <style>
 .storyhero{background:radial-gradient(120% 130% at 50% 0%,#e8743b,#c0392b 45%,#7a1f3d 100%);color:var(--cream);text-align:center;padding:60px 0 56px}
@@ -56,6 +56,73 @@ h2.sec{font-size:clamp(23px,3vw,30px);line-height:1.25;letter-spacing:-.35px;col
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Custom Wedding Song — Made From Your Love Story | Nomoclub Music","url":"https://nomoclub.com/wedding-song","inLanguage":"en","description":"Have a custom wedding song made from your love story — for your first dance, the ceremony or as a surprise. Hear a free sample first.","isPartOf":{"@type":"WebSite","name":"Nomoclub Music","url":"https://nomoclub.com/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can the wedding song be our first dance?","acceptedAnswer":{"@type":"Answer","text":"Yes — that might be the most beautiful moment for it. You receive the song as an audio file, and we match the tempo and mood to the dance you have in mind: from a slow ballad to a joyful opening dance."}},{"@type":"Question","name":"Can I surprise my partner with it?","acceptedAnswer":{"@type":"Answer","text":"Yes. You tell us your story in secret — how you found each other, what you want to promise them — and on the big day a song plays that nobody saw coming."}},{"@type":"Question","name":"Can we gift a wedding song as parents or friends?","acceptedAnswer":{"@type":"Answer","text":"Absolutely, it happens often. Tell us the couple's story and we turn it into a wedding song — a gift that beats every speech."}},{"@type":"Question","name":"How quickly is the wedding song ready?","acceptedAnswer":{"@type":"Answer","text":"Standard within 5 days. Is the wedding sooner? With rush delivery your song is ready within 24 hours (+€50 / £45 / $55)."}},{"@type":"Question","name":"What about a wedding anniversary?","acceptedAnswer":{"@type":"Answer","text":"Yes — a silver, ruby or golden anniversary deserves its own song just as much. Tell us the story of all those years together."}}]}</script>
+<style id="typo">
+/* ===== Typografie: Lora voor koppen, Inter voor de rest ===== */
+h1,h2,h2.sec,.hero h1,.storyhero h1,.legal-wrap h1,.legal-wrap h2,.ctaband h2,.nudge{
+  font-family:'Lora',Georgia,'Times New Roman',serif;font-weight:700;text-wrap:balance}
+h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:52px;line-height:1.08;letter-spacing:-.025em}
+h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:34px;line-height:1.18;letter-spacing:-.015em;margin:8px 0 14px}
+.nudge{font-size:27px;line-height:1.3;letter-spacing:-.015em}
+
+h3,.step h3,.card h3,.song h3{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:18px;line-height:1.4;letter-spacing:-.01em}
+
+/* hero-intro */
+.hero .tag,.storyhero .lead{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.55}
+
+/* korte gevoelszinnen */
+.feel{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:19px;line-height:1.75;text-align:center;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* gewone alinea's */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review{
+  font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:18px;line-height:1.65}
+.step p,.song p,.note,.foot-sub{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:16px;line-height:1.65}
+
+/* leeskolom: max 680px, gecentreerd */
+.lead,.sublead,.secsub,.prose,.steps-simple,.faqblock,.player-wrap{max-width:680px}
+.center .lead,.center .sublead,.center .feel{margin-left:auto;margin-right:auto}
+.center .para{max-width:680px;margin-left:auto;margin-right:auto;text-align:left}
+
+/* kleur bodytekst */
+.lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.step p,.song p,.feel{color:#554A50}
+/* donkere vlakken houden hun lichte tekst */
+.hero .tag{color:#fce4d4}
+.storyhero .lead{color:#fce4d4}
+.ctaband .lead{color:#fce4d4}
+/* koppen op lichte achtergrond: donkerpaars blijft */
+h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
+.ctaband h2{color:#fff}
+.storyhero h1{color:#fff}
+
+/* kleine uppercase bovenkopjes */
+.eyebrow,.eyebrow2,.hero .eyebrow,.storyhero .eyebrow{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+
+/* navigatie */
+.nav-right,.nav-right a,.foot-links,.foot-links a,.foot-mail{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500;font-size:14px}
+
+/* knoppen */
+.btn,.sticky-cta,.langtoggle button,.langtoggle a,.curswitch button{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+.btn,.sticky-cta{font-size:15px}
+
+/* Inter heeft geen 800 geladen: normaliseer naar 700 */
+.brand,.price,.badge,.step .n,.foot-brand strong,.faq summary,.faq summary:after,.card li:before,.faqblock summary{font-weight:700}
+.faq summary,.faqblock summary{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:1.45}
+
+/* tablet */
+@media(max-width:1024px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:44px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:32px}
+  .nudge{font-size:25px}
+}
+/* mobiel */
+@media(max-width:640px){
+  h1,.hero h1,.storyhero h1,.legal-wrap h1{font-size:38px}
+  h2,h2.sec,.ctaband h2,.legal-wrap h2{font-size:29px}
+  .nudge{font-size:22px}
+  .lead,.sublead,.secsub,.prose p,.prose li,.steps-simple li,.faq p,.faqblock p,.legal-wrap p,.legal-wrap li,.card li,.review,.hero .tag,.storyhero .lead,.faq summary,.faqblock summary{font-size:17px}
+  .feel{font-size:17.5px}
+  .h1brk{display:none}
+}
+</style>
 </head>
 <body class="lang-en">
 

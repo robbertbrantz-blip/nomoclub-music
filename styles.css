@@ -7,7 +7,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);background:#fbf4ec;line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
-h1,h2,h3,.brand,.btn,.eyebrow,.eyebrow2,.price,.badge,.curswitch button,.curlabel,.step .n,.foot-brand strong,.nudge{font-family:'Poppins','Inter',sans-serif}
+h1,h2,h3,.brand,.btn,.eyebrow,.eyebrow2,.price,.badge,.curswitch button,.curlabel,.step .n,.foot-brand strong,.nudge{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
@@ -177,7 +177,7 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
   .foot-brand{flex-direction:column;text-align:center}
   .foot-links{justify-content:center}
   body{padding-bottom:78px}
-  .sticky-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:9px;background:linear-gradient(135deg,#e8743b,#c0392b);color:#fff;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:40px;box-shadow:0 8px 24px rgba(120,40,30,.32);font-family:'Poppins','Inter',sans-serif;font-size:15px}
+  .sticky-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:9px;background:linear-gradient(135deg,#e8743b,#c0392b);color:#fff;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:40px;box-shadow:0 8px 24px rgba(120,40,30,.32);font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px}
   .sticky-cta svg{flex:none}
 }
 
