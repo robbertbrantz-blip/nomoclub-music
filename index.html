@@ -454,6 +454,16 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 .songchip{font-size:11px;padding:4px 10px;flex:none;font-weight:700;letter-spacing:.02em}
 .song p{margin-top:8px}
 .examples .btns{margin-top:36px}
+/* ===== hero-afbeelding is de speler ===== */
+.herolink{position:relative;display:block;border-radius:18px;overflow:hidden;
+  box-shadow:0 22px 60px rgba(0,0,0,.38);transition:transform .18s,box-shadow .18s}
+.herolink:hover{transform:translateY(-2px);box-shadow:0 26px 70px rgba(0,0,0,.44)}
+.herolink img{border-radius:0;box-shadow:none}
+.heroplay{position:absolute;inset:0;margin:auto;width:76px;height:76px;border-radius:50%;
+  background:rgba(232,116,59,.94);color:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 26px rgba(0,0,0,.34);transition:transform .18s,background .18s;padding-left:4px}
+.herolink:hover .heroplay{transform:scale(1.08);background:var(--orange)}
+@media(max-width:640px){.heroplay{width:62px;height:62px}}
 @media(max-width:900px){.songgrid{grid-template-columns:1fr 1fr;gap:20px}}
 @media(max-width:620px){.songgrid{grid-template-columns:1fr;gap:18px;margin-top:24px}}
 </style>
@@ -492,7 +502,7 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <div class="hero-media">
 
 
-<picture><source sizes="(max-width:860px) 92vw, 50vw" srcset="hero-nl-768.webp 768w, hero-nl-1280.webp 1280w" type="image/webp"/><img alt="Nomoclub Music — Uit je Hart: iemand kijkt naar een zonsondergang boven zee" class="nl" decoding="async" fetchpriority="high" height="670" src="hero-nl.jpg" width="1280"/></picture></div>
+<a class="herolink" href="https://www.youtube.com/watch?v=wjAL6GdX2zo" rel="noopener" target="_blank" aria-label="Luister naar Uit Je Hart op YouTube"><picture><source sizes="(max-width:860px) 92vw, 50vw" srcset="hero-nl-768.webp 768w, hero-nl-1280.webp 1280w" type="image/webp"/><img alt="Nomoclub Music — Uit je Hart: iemand kijkt naar een zonsondergang boven zee" class="nl" decoding="async" fetchpriority="high" height="670" src="hero-nl.jpg" width="1280"/></picture><span class="heroplay" aria-hidden="true"><svg fill="currentColor" height="32" viewBox="0 0 24 24" width="32"><path d="M8 5v14l11-7z"></path></svg></span></a></div>
 </div>
 </section>
 <section class="center hartblok" id="for-whom">
@@ -523,7 +533,6 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <div class="rule"></div>
 <p class="nudge"><span class="nl">Achter ieder lied hieronder schuilt een echt verhaal. Over iemand die wordt liefgehad, gemist of nooit vergeten mag worden.</span></p>
 <p class="sublead"><span class="nl">Luister naar de liefde, het gemis en de herinneringen die in een lied een blijvende stem krijgen.</span></p>
-<p class="basissong"><span class="nl">Benieuwd hoe wij zelf klinken? Luister naar <a href="https://www.youtube.com/watch?v=wjAL6GdX2zo" rel="noopener" target="_blank">Uit Je Hart</a>.</span></p>
 <div class="songgrid nl">
 <article class="song">
 <div class="ytfacade" data-id="HDazBddrUgA" data-title="The Lighthouse Still Shines — Nomoclub Music">
