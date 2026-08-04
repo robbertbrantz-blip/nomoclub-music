@@ -454,6 +454,13 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 .songchip{font-size:11px;padding:4px 10px;flex:none;font-weight:700;letter-spacing:.02em}
 .song p{margin-top:8px}
 .examples .btns{margin-top:36px}
+/* ===== vier stappen: 2x2 zodat de langere teksten ruimte hebben ===== */
+#how .steps{grid-template-columns:1fr 1fr;gap:22px;max-width:940px;margin-left:auto;margin-right:auto}
+#how .step{padding:26px 28px;display:flex;flex-direction:column}
+#how .step .n{margin-bottom:14px}
+#how .step h3{margin-bottom:8px}
+#how .step p{font-size:16.5px;line-height:1.65;color:#554A50}
+@media(max-width:700px){#how .steps{grid-template-columns:1fr;gap:16px}#how .step{padding:22px 22px}}
 /* ===== hero-afbeelding is de speler (speelt af op de pagina zelf) ===== */
 .herofacade{aspect-ratio:1280/670;border-radius:18px;box-shadow:0 22px 60px rgba(0,0,0,.38);
   background:#2b1331;transition:transform .18s,box-shadow .18s}
@@ -569,31 +576,31 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <section id="how" style="background:#fff">
 <div class="wrap center">
 <div class="eyebrow2"><span class="nl">Zo werkt het</span></div>
-<h2><span class="nl">In vier stappen</span></h2>
+<h2><span class="nl">Van jouw verhaal naar een persoonlijk lied</span></h2>
 <div class="rule"></div>
-<p class="lead"><span class="nl">Zo gaat het bij ons.</span></p>
+<p class="lead"><span class="nl">Met persoonlijke aandacht en slimme AI-technologie maken we van jouw woorden en herinneringen een compleet lied. Daardoor kunnen we maatwerk bieden voor een prijs die voor veel mensen bereikbaar blijft.</span></p>
 </div>
 <div class="wrap">
 <div class="steps">
 <div class="step">
 <div class="n">1</div>
 <h3><span class="nl">Vertel je verhaal</span></h3>
-<p><span class="nl">Over wie het gaat, in je eigen woorden. Het hoeft niet mooi te zijn en niet compleet. Een favoriet nummer mag je gerust noemen.</span></p>
+<p><span class="nl">Deel voor wie het lied is, wat je wilt zeggen en welke herinneringen belangrijk zijn. Je hoeft niets mooi op te schrijven. Een paar persoonlijke details zijn vaak al genoeg.</span></p>
 </div>
 <div class="step">
 <div class="n">2</div>
-<h3><span class="nl">Wij schrijven en maken het</span></h3>
-<p><span class="nl">Een echt mens leest elk verhaal. Met zorg, en zonder haast.</span></p>
+<h3><span class="nl">Wij schrijven en produceren</span></h3>
+<p><span class="nl">We vertalen jouw verhaal naar een songtekst en kiezen de muziekstijl, stem en sfeer die erbij passen. Voor de muzikale productie gebruiken we AI, onder onze begeleiding en met zorgvuldige controle van het resultaat.</span></p>
 </div>
 <div class="step">
 <div class="n">3</div>
-<h3><span class="nl">Je hoort het eerst</span></h3>
-<p><span class="nl">Een fragment van je lied, zodat je precies weet hoe het klinkt.</span></p>
+<h3><span class="nl">Luister naar een eerste fragment</span></h3>
+<p><span class="nl">Je ontvangt eerst een fragment van het lied. Zo kun je beoordelen of de tekst, muziek en sfeer passen bij wat je voor ogen had.</span></p>
 </div>
 <div class="step">
 <div class="n">4</div>
-<h3><span class="nl">Betaal pas als het je raakt</span></h3>
-<p><span class="nl">Daarna ontvang je het complete lied. Optioneel met cover art en een release op Spotify.</span></p>
+<h3><span class="nl">Betaal pas als je tevreden bent</span></h3>
+<p><span class="nl">Pas wanneer je het lied wilt ontvangen, betaal je. Dankzij het gebruik van AI kunnen we de kosten laag houden. Daarna ontvang je de complete versie, eventueel met persoonlijke cover en publicatie op Spotify.</span></p>
 </div>
 </div>
 <div class="center" style="margin-top:34px">
