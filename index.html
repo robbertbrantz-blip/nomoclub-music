@@ -454,6 +454,30 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 .songchip{font-size:11px;padding:4px 10px;flex:none;font-weight:700;letter-spacing:.02em}
 .song p{margin-top:8px}
 .examples .btns{margin-top:36px}
+/* ===== prijzen ===== */
+#pricing .cards{grid-template-columns:1fr 1fr;gap:24px;max-width:940px;margin-left:auto;margin-right:auto}
+#pricing .card{display:flex;flex-direction:column;padding:32px 32px 30px;text-align:left}
+#pricing .card h3{margin:0}
+.plansub{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#7a6570;margin-top:5px}
+#pricing .price{margin:18px 0 0}
+.planintro{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16.5px;line-height:1.6;color:#554A50;margin-top:14px}
+#pricing .card ul{margin:18px 0 0;flex:1}
+#pricing .card li{font-size:16px;line-height:1.6}
+.planbtn{margin-top:26px;width:100%;justify-content:center}
+.infogrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:940px;margin:34px auto 0;text-align:left}
+.infoblock{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 30px;
+  box-shadow:0 8px 30px rgba(120,40,30,.06);display:flex;flex-direction:column}
+.infoblock h3{margin:0 0 12px}
+.infoblock p{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#554A50;margin-top:12px}
+.infoblock p:first-of-type{margin-top:0}
+.infoblock .btn{margin-top:auto;align-self:flex-start}
+.infoblock .btn:not(.planbtn){margin-top:22px}
+@media(max-width:820px){
+  #pricing .cards{grid-template-columns:1fr}
+  .infogrid{grid-template-columns:1fr;gap:16px}
+  #pricing .card{padding:26px 24px}
+  .infoblock{padding:24px 24px}
+}
 /* ===== vier stappen: 2x2 zodat de langere teksten ruimte hebben ===== */
 #how .steps{grid-template-columns:1fr 1fr;gap:22px;max-width:940px;margin-left:auto;margin-right:auto}
 #how .step{padding:26px 28px;display:flex;flex-direction:column}
@@ -610,10 +634,11 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 </section>
 <section class="pricing" id="pricing">
 <div class="wrap center">
-<div class="eyebrow2"><span class="nl">Twee opties</span></div>
-<h2><span class="nl">Kies het liedje dat bij je past</span></h2>
+<div class="eyebrow2"><span class="nl">Jouw persoonlijke lied</span></div>
+<h2><span class="nl">Kies wat bij jouw moment past</span></h2>
 <div class="rule"></div>
-<p class="lead"><span class="nl">Alleen voor jullie, of compleet met cover art en overal te beluisteren.</span></p>
+<p class="lead"><span class="nl">Elk lied wordt gemaakt rond jouw verhaal, herinneringen en woorden. Bewaar het privé voor jezelf en je naasten, of kies voor een complete uitgave met een persoonlijke cover.</span></p>
+<p class="lead" style="margin-top:12px"><span class="nl">Met persoonlijke aandacht en ondersteuning van AI maken we een volledig lied voor een bereikbare prijs.</span></p>
 <div aria-label="Currency" class="curswitch" role="group">
 <span class="curlabel"><span class="nl">Valuta:</span></span>
 <button data-cur="eur">€ EUR</button>
@@ -624,31 +649,49 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <div class="wrap">
 <div class="cards">
 <div class="card">
-<h3><span class="nl">Alleen voor Jou</span></h3>
+<h3><span class="nl">Persoonlijk lied</span></h3>
+<p class="plansub"><span class="nl">Voor jou en de mensen met wie je het wilt delen</span></p>
 <div class="price"><span class="cur" data-eur="€69" data-gbp="£59" data-usd="$79">€69</span> <small><span class="nl">incl. btw</span></small></div>
+<p class="planintro"><span class="nl">Een compleet lied dat jouw verhaal op een persoonlijke manier vertelt.</span></p>
 <ul>
-<li><span class="nl">Een lied geschreven rond jouw verhaal</span></li>
-<li><span class="nl">Jouw persoonlijke lied (audiobestand)</span></li>
-<li><span class="nl">Blijft privé, alleen voor jou</span></li>
-<li><span class="nl">Mooi achter een trouw- of herdenkingsvideo</span></li>
+<li><span class="nl">Een songtekst geschreven rond jouw verhaal</span></li>
+<li><span class="nl">Muziek, zang en sfeer die bij het moment passen</span></li>
+<li><span class="nl">Het complete lied als audiobestand</span></li>
+<li><span class="nl">Privé geleverd en niet openbaar gepubliceerd</span></li>
+<li><span class="nl">Geschikt als persoonlijk cadeau, bij een ceremonie of onder een trouw- of herdenkingsvideo</span></li>
 </ul>
+<a class="btn outline planbtn" href="/contact"><span class="nl">Laat mijn lied maken</span></a>
 </div>
 <div class="card feat">
 <div class="badge"><span class="nl">Meest gekozen</span></div>
-<h3><span class="nl">Voor de Wereld</span></h3>
+<h3><span class="nl">Complete uitgave</span></h3>
+<p class="plansub"><span class="nl">Een eigen cover en overal te beluisteren</span></p>
 <div class="price"><span class="cur" data-eur="€89" data-gbp="£79" data-usd="$99">€89</span> <small><span class="nl">incl. btw</span></small></div>
+<p class="planintro"><span class="nl">Maak van jouw persoonlijke lied een complete uitgave die je eenvoudig kunt bewaren en delen.</span></p>
 <ul>
-<li><span class="nl">Alles uit Alleen voor Jou</span></li>
-<li><span class="nl">Wij maken de cover art</span></li>
-<li><span class="nl">Officieel uitgebracht op Spotify, Apple Music &amp; YouTube</span></li>
-<li><span class="nl">Voor altijd terug te luisteren &amp; te delen</span></li>
+<li><span class="nl">Alles uit Persoonlijk lied</span></li>
+<li><span class="nl">Een persoonlijke cover, passend bij het verhaal en de muziek</span></li>
+<li><span class="nl">Publicatie op Spotify, Apple Music en YouTube Music</span></li>
+<li><span class="nl">Een deelbare link voor familie, vrienden en andere dierbaren</span></li>
+<li><span class="nl">Ook later gemakkelijk terug te vinden en te beluisteren</span></li>
 </ul>
+<a class="btn planbtn" href="/contact"><span class="nl">Kies de complete uitgave</span></a>
 </div>
 </div>
-<p class="note">
-
-<span class="nl">Standaard levertijd binnen 5 dagen. Spoed binnen 24 uur: <span class="cur" data-eur="+€50" data-gbp="+£45" data-usd="+$55">+€50</span>. Je hoort eerst een sample en ontvangt na betaling het volledige lied.</span>
-</p>
+<div class="infogrid">
+<div class="infoblock">
+<h3><span class="nl">Eerst luisteren, daarna beslissen</span></h3>
+<p><span class="nl">Je ontvangt eerst een fragment van jouw persoonlijke lied. Zo kun je horen of de tekst, muziek en sfeer passen bij wat je wilde laten zeggen. Pas wanneer je het complete lied wilt ontvangen, betaal je het gekozen pakket.</span></p>
+<p><span class="nl">De standaardlevertijd is maximaal vijf dagen. Heb je het lied sneller nodig? Spoedlevering binnen 24 uur is mogelijk voor <span class="cur" data-eur="€50" data-gbp="£45" data-usd="$55">€50</span> extra.</span></p>
+<p><span class="nl">Bij een complete uitgave wordt het lied na jouw goedkeuring aangeboden bij de streamingdiensten. De verwerkingstijd van de platforms kan enkele dagen langer zijn.</span></p>
+</div>
+<div class="infoblock">
+<h3><span class="nl">Een uitgebreider verhaal of een bijzondere wens?</span></h3>
+<p><span class="nl">Sommige liedjes vragen om meer overleg of een uitgebreidere productie. Bijvoorbeeld wanneer meerdere mensen aan het verhaal bijdragen, je verschillende versies wilt, er veel persoonlijke gebeurtenissen in het lied moeten worden verwerkt of het lied onderdeel is van een belangrijke ceremonie.</span></p>
+<p><span class="nl">Aanvullende begeleiding en extra productiewerk kosten €75 incl. btw per uur. Je ontvangt altijd vooraf een inschatting. We voeren geen extra werk uit zonder jouw toestemming.</span></p>
+<a class="btn outline" href="/contact"><span class="nl">Bespreek mijn bijzondere wens</span></a>
+</div>
+</div>
 </div>
 </section>
 <section id="reviews">
