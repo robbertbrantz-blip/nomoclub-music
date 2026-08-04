@@ -439,6 +439,23 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 .nudge{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
   font-size:21px;line-height:1.5;letter-spacing:-.005em;color:var(--deep);text-wrap:balance}
 @media(max-width:640px){.nudge{font-size:18.5px}}
+
+/* ===== drie liedjes op de homepage ===== */
+.basissong{margin-top:16px;font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:15.5px;line-height:1.6;color:#7a6570}
+.basissong a{color:var(--red);text-decoration:underline;text-underline-offset:2px;font-weight:600}
+.basissong a:hover{color:var(--orange)}
+.songgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px;text-align:left}
+.song{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;
+  box-shadow:0 10px 32px rgba(120,40,30,.07)}
+.song .ytfacade{border-radius:12px;box-shadow:none;aspect-ratio:16/9}
+.songhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
+.songhead h3{margin:0}
+.songchip{font-size:11px;padding:4px 10px;flex:none;font-weight:700;letter-spacing:.02em}
+.song p{margin-top:8px}
+.examples .btns{margin-top:36px}
+@media(max-width:900px){.songgrid{grid-template-columns:1fr 1fr;gap:20px}}
+@media(max-width:620px){.songgrid{grid-template-columns:1fr;gap:18px;margin-top:24px}}
 </style>
 </head>
 <body class="lang-nl">
@@ -506,16 +523,38 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <div class="rule"></div>
 <p class="nudge"><span class="nl">Achter ieder lied hieronder schuilt een echt verhaal. Over iemand die wordt liefgehad, gemist of nooit vergeten mag worden.</span></p>
 <p class="sublead"><span class="nl">Luister naar de liefde, het gemis en de herinneringen die in een lied een blijvende stem krijgen.</span></p>
-<div class="player-wrap">
-
-<div class="nl">
-<div class="ytfacade" data-id="wjAL6GdX2zo" data-title="Uit Je Hart — Nomoclub Music">
-<img alt="Uit Je Hart — Nomoclub Music" height="360" loading="lazy" src="https://i.ytimg.com/vi/wjAL6GdX2zo/hqdefault.jpg" width="480"/>
-<button aria-label="Speel Uit Je Hart af" class="ytplay" type="button">
-<svg aria-hidden="true" fill="currentColor" height="30" viewbox="0 0 24 24" width="30"><path d="M8 5v14l11-7z"></path></svg>
+<p class="basissong"><span class="nl">Benieuwd hoe wij zelf klinken? Luister naar <a href="https://www.youtube.com/watch?v=wjAL6GdX2zo" rel="noopener" target="_blank">Uit Je Hart</a>.</span></p>
+<div class="songgrid nl">
+<article class="song">
+<div class="ytfacade" data-id="HDazBddrUgA" data-title="The Lighthouse Still Shines — Nomoclub Music">
+<img alt="The Lighthouse Still Shines — Nomoclub Music" height="360" loading="lazy" src="https://i.ytimg.com/vi/HDazBddrUgA/hqdefault.jpg" width="480"/>
+<button aria-label="Speel The Lighthouse Still Shines af" class="ytplay" type="button">
+<svg aria-hidden="true" fill="currentColor" height="30" viewBox="0 0 24 24" width="30"><path d="M8 5v14l11-7z"></path></svg>
 </button>
 </div>
+<div class="songhead"><h3>The Lighthouse Still Shines</h3><span class="chip songchip">Engelstalig</span></div>
+<p><span class="nl">Een cadeau van liefde, voor iemand die zijn vader veel te jong verloor. De vuurtoren is zijn vader: die blijft schijnen, richting geeft en er is — elk jaar opnieuw.</span></p>
+</article>
+<article class="song">
+<div class="ytfacade" data-id="TMRPolpqD8E" data-title="Ik ben zo trots op jou — Nomoclub Music">
+<img alt="Ik ben zo trots op jou — Nomoclub Music" height="360" loading="lazy" src="https://i.ytimg.com/vi/TMRPolpqD8E/hqdefault.jpg" width="480"/>
+<button aria-label="Speel Ik ben zo trots op jou af" class="ytplay" type="button">
+<svg aria-hidden="true" fill="currentColor" height="30" viewBox="0 0 24 24" width="30"><path d="M8 5v14l11-7z"></path></svg>
+</button>
 </div>
+<div class="songhead"><h3>Ik ben zo trots op jou</h3><span class="chip songchip">Nederlandstalig</span></div>
+<p><span class="nl">Een moeder die haar dochter iets blijvends wil meegeven: hoe trots ze is, hoeveel ze van haar houdt, dat ze er altijd zal zijn. Woorden die soms lastig uit te spreken zijn — nu kan ze ze altijd horen.</span></p>
+</article>
+<article class="song">
+<div class="ytfacade" data-id="PYKNjG6QlDg" data-title="Always There, Gary — Nomoclub Music">
+<img alt="Always There, Gary — Nomoclub Music" height="360" loading="lazy" src="https://i.ytimg.com/vi/PYKNjG6QlDg/hqdefault.jpg" width="480"/>
+<button aria-label="Speel Always There, Gary af" class="ytplay" type="button">
+<svg aria-hidden="true" fill="currentColor" height="30" viewBox="0 0 24 24" width="30"><path d="M8 5v14l11-7z"></path></svg>
+</button>
+</div>
+<div class="songhead"><h3>Always There, Gary</h3><span class="chip songchip">Engelstalig</span></div>
+<p><span class="nl">Voor een broer die ook een beste vriend was. Samen opgroeien in een groot gezin, kattenkwaad en schoolverhalen, altijd voor elkaar klaarstaan. Een lied vol liefde en gemis.</span></p>
+</article>
 </div>
 <div class="btns" style="justify-content:center">
 <a class="btn" href="/verhalen"><span class="nl">Luister naar meer liedjes →</span></a>
