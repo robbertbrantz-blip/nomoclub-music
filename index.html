@@ -266,10 +266,10 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Hoe lang duurt het?",
+      "name": "Hoe snel ontvang ik mijn lied?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Standaard lever je lied binnen 5 dagen. Heb je het sneller nodig? Met spoed heb je het binnen 24 uur."
+        "text": "Meestal is jouw lied binnen vijf dagen klaar. Is er een bijzondere datum of is er weinig tijd? Dan kunnen we het lied met spoed binnen 24 uur leveren."
       }
     },
     {
@@ -277,7 +277,7 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
       "name": "Wanneer betaal ik?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Je hoort eerst een gratis sample van je lied. Wil je de volledige versie, dan reken je af via een veilige betaallink en ontvang je direct het complete lied."
+        "text": "Je ontvangt eerst kosteloos een fragment van jouw lied. Zo kun je rustig luisteren of de tekst, muziek en sfeer passen bij jouw verhaal. Wil je daarna het complete lied ontvangen, dan betaal je eenvoudig via een Tikkie of een veilige betaallink."
       }
     },
     {
@@ -285,7 +285,23 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
       "name": "Hoe kan ik betalen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Veilig via Stripe — iDEAL, Bancontact, creditcard, Apple Pay en Google Pay, afhankelijk van je land."
+        "text": "In Nederland kun je betalen via een Tikkie. Daarnaast kun je veilig afrekenen via Stripe, bijvoorbeeld met iDEAL, Bancontact, creditcard, Apple Pay of Google Pay. De beschikbare betaalmogelijkheden verschillen per land."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat gebeurt er als het lied niet goed voelt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Je zit nergens aan vast. Spreekt het eerste fragment je niet aan, dan hoef je niets te betalen. Vertel ons gerust wat je anders had verwacht; dan kijken we samen of we het lied beter bij jouw verhaal kunnen laten aansluiten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik zelf kiezen hoe het lied klinkt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Je kunt vertellen welke muziekstijl, sfeer of stem je mooi vindt. Een favoriet lied of een artiest mag je ook als inspiratie noemen. Wij zorgen dat het resultaat een eigen, persoonlijk lied wordt."
       }
     },
     {
@@ -293,31 +309,39 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
       "name": "Kan ik een eigen foto gebruiken voor de cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Bij de optie Voor de Wereld kun je ons je eigen foto geven, of we ontwerpen er een voor je."
+        "text": "Ja. Bij de Complete uitgave kun je een persoonlijke foto aanleveren. Heb je geen geschikte foto, dan ontwerpen wij een cover die past bij het verhaal en de sfeer van het lied."
       }
     },
     {
       "@type": "Question",
-      "name": "En als ik niet blij ben?",
+      "name": "Voor welke momenten laten mensen een lied maken?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dankzij de sample hoor je vooraf hoe je lied klinkt. Spreekt het je niet aan, dan hoef je niets te betalen."
+        "text": "Voor momenten waarop gewone woorden niet genoeg lijken. Om te zeggen dat je van iemand houdt of trots bent. Als persoonlijk cadeau, voor een huwelijk of geboorte, bij ziekte of afscheid, of als herinnering aan iemand die wordt gemist. Ook een lied voor jezelf is mogelijk."
       }
     },
     {
       "@type": "Question",
-      "name": "Wanneer laten mensen zo'n lied maken?",
+      "name": "Kan een lied worden gemaakt voor iemand die ongeneeslijk ziek is?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Meestal niet in de eerste weken \u2014 dan is er geen ruimte en regel je van alles. Vaker later, als het stil is geworden. Rond een sterfdag bijvoorbeeld."
+        "text": "Ja. Soms is er nog veel wat iemand wil zeggen, maar zijn de juiste woorden moeilijk te vinden. Een lied kan liefde, dankbaarheid en gedeelde herinneringen een blijvende vorm geven — om nu samen te beluisteren of later te bewaren."
       }
     },
     {
       "@type": "Question",
-      "name": "Kan een lied ook gaan over iemand die overleden is?",
+      "name": "Kan een lied gaan over iemand die is overleden?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dat is waar de meeste liedjes bij ons over gaan. Voor een uitvaart, voor een sterfdag, of gewoon omdat je iemand mist."
+        "text": "Ja. Een persoonlijk lied kan worden gemaakt voor een uitvaart, rond een sterfdag of gewoon omdat je iemand mist. Het vertelt niet alleen over het afscheid, maar juist ook over wie iemand was, wat jullie samen deelden en wat daarvan blijft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Blijft mijn verhaal privé?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jouw verhaal wordt zorgvuldig en persoonlijk behandeld. Kies je voor het Persoonlijk lied, dan blijft het lied privé. Alleen bij de Complete uitgave wordt het na jouw toestemming gepubliceerd op de streamingdiensten."
       }
     }
   ]
@@ -454,6 +478,11 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 .songchip{font-size:11px;padding:4px 10px;flex:none;font-weight:700;letter-spacing:.02em}
 .song p{margin-top:8px}
 .examples .btns{margin-top:36px}
+/* ===== vragen ===== */
+.faqlist{max-width:820px;margin:30px auto 0}
+.faq details{border-radius:14px;padding:2px 20px}
+.faq summary{padding:16px 0}
+.faq p{max-width:none}
 /* ===== prijzen ===== */
 #pricing .cards{grid-template-columns:1fr 1fr;gap:24px;max-width:940px;margin-left:auto;margin-right:auto}
 #pricing .card{display:flex;flex-direction:column;padding:32px 32px 30px;text-align:left}
@@ -711,38 +740,52 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <section class="faq" id="faq" style="background:#fff">
 <div class="wrap">
 <div class="center">
-<div class="eyebrow2">FAQ</div>
-<h2><span class="nl">Veelgestelde vragen</span></h2>
+<div class="eyebrow2"><span class="nl">Goed om te weten</span></div>
+<h2><span class="nl">Vragen over jouw persoonlijke lied</span></h2>
 <div class="rule"></div>
 </div>
+<div class="faqlist">
 <details>
-<summary><span class="nl">Hoe lang duurt het?</span></summary>
-<p><span class="nl">Standaard lever je lied binnen 5 dagen. Heb je het sneller nodig? Met spoed heb je het binnen 24 uur.</span></p>
+<summary><span class="nl">Hoe snel ontvang ik mijn lied?</span></summary>
+<p><span class="nl">Meestal is jouw lied binnen vijf dagen klaar. Is er een bijzondere datum of is er weinig tijd? Dan kunnen we het lied met spoed binnen 24 uur leveren.</span></p>
 </details>
 <details>
 <summary><span class="nl">Wanneer betaal ik?</span></summary>
-<p><span class="nl">Je hoort eerst een gratis sample van je lied. Wil je de volledige versie, dan reken je af via een veilige betaallink en ontvang je direct het complete lied.</span></p>
+<p><span class="nl">Je ontvangt eerst kosteloos een fragment van jouw lied. Zo kun je rustig luisteren of de tekst, muziek en sfeer passen bij jouw verhaal. Wil je daarna het complete lied ontvangen, dan betaal je eenvoudig via een Tikkie of een veilige betaallink.</span></p>
 </details>
 <details>
 <summary><span class="nl">Hoe kan ik betalen?</span></summary>
-<p><span class="nl">Veilig via Stripe — iDEAL, Bancontact, creditcard, Apple Pay en Google Pay, afhankelijk van je land.</span></p>
+<p><span class="nl">In Nederland kun je betalen via een Tikkie. Daarnaast kun je veilig afrekenen via Stripe, bijvoorbeeld met iDEAL, Bancontact, creditcard, Apple Pay of Google Pay. De beschikbare betaalmogelijkheden verschillen per land.</span></p>
+</details>
+<details>
+<summary><span class="nl">Wat gebeurt er als het lied niet goed voelt?</span></summary>
+<p><span class="nl">Je zit nergens aan vast. Spreekt het eerste fragment je niet aan, dan hoef je niets te betalen. Vertel ons gerust wat je anders had verwacht; dan kijken we samen of we het lied beter bij jouw verhaal kunnen laten aansluiten.</span></p>
+</details>
+<details>
+<summary><span class="nl">Kan ik zelf kiezen hoe het lied klinkt?</span></summary>
+<p><span class="nl">Ja. Je kunt vertellen welke muziekstijl, sfeer of stem je mooi vindt. Een favoriet lied of een artiest mag je ook als inspiratie noemen. Wij zorgen dat het resultaat een eigen, persoonlijk lied wordt.</span></p>
 </details>
 <details>
 <summary><span class="nl">Kan ik een eigen foto gebruiken voor de cover?</span></summary>
-<p><span class="nl">Ja. Bij de optie Voor de Wereld kun je ons je eigen foto geven, of we ontwerpen er een voor je.</span></p>
+<p><span class="nl">Ja. Bij de Complete uitgave kun je een persoonlijke foto aanleveren. Heb je geen geschikte foto, dan ontwerpen wij een cover die past bij het verhaal en de sfeer van het lied.</span></p>
 </details>
 <details>
-<summary><span class="nl">En als ik niet blij ben?</span></summary>
-<p><span class="nl">Dankzij de sample hoor je vooraf hoe je lied klinkt. Spreekt het je niet aan, dan hoef je niets te betalen.</span></p>
+<summary><span class="nl">Voor welke momenten laten mensen een lied maken?</span></summary>
+<p><span class="nl">Voor momenten waarop gewone woorden niet genoeg lijken. Om te zeggen dat je van iemand houdt of trots bent. Als persoonlijk cadeau, voor een huwelijk of geboorte, bij ziekte of afscheid, of als herinnering aan iemand die wordt gemist. Ook een lied voor jezelf is mogelijk.</span></p>
 </details>
 <details>
-<summary><span class="nl">Wanneer laten mensen zo’n lied maken?</span></summary>
-<p><span class="nl">Meestal niet in de eerste weken — dan is er geen ruimte en regel je van alles. Vaker later, als het stil is geworden. Rond een sterfdag bijvoorbeeld.</span></p>
+<summary><span class="nl">Kan een lied worden gemaakt voor iemand die ongeneeslijk ziek is?</span></summary>
+<p><span class="nl">Ja. Soms is er nog veel wat iemand wil zeggen, maar zijn de juiste woorden moeilijk te vinden. Een lied kan liefde, dankbaarheid en gedeelde herinneringen een blijvende vorm geven — om nu samen te beluisteren of later te bewaren.</span></p>
 </details>
 <details>
-<summary><span class="nl">Kan een lied ook gaan over iemand die overleden is?</span></summary>
-<p><span class="nl">Dat is waar de meeste liedjes bij ons over gaan. Voor een uitvaart, voor een sterfdag, of gewoon omdat je iemand mist. Kijk bij <a href="/afscheidslied">een afscheidslied</a> of bij <a href="/sterfdag-herdenken">sterfdag herdenken</a>.</span></p>
+<summary><span class="nl">Kan een lied gaan over iemand die is overleden?</span></summary>
+<p><span class="nl">Ja. Een persoonlijk lied kan worden gemaakt voor <a href="/afscheidslied">een uitvaart</a>, rond <a href="/sterfdag-herdenken">een sterfdag</a> of gewoon omdat je iemand mist. Het vertelt niet alleen over het afscheid, maar juist ook over wie iemand was, wat jullie samen deelden en wat daarvan blijft.</span></p>
 </details>
+<details>
+<summary><span class="nl">Blijft mijn verhaal privé?</span></summary>
+<p><span class="nl">Jouw verhaal wordt zorgvuldig en persoonlijk behandeld. Kies je voor het Persoonlijk lied, dan blijft het lied privé. Alleen bij de Complete uitgave wordt het na jouw toestemming gepubliceerd op de streamingdiensten.</span></p>
+</details>
+</div>
 </div>
 </section>
 <section class="ctaband" id="contact">
