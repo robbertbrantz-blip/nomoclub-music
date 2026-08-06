@@ -1,6 +1,6 @@
 /* Cookie consent for nomoclub.com
    - Loads GA4 + Meta Pixel ONLY after the visitor accepts.
-   - Banner language follows the site language (localStorage 'nomoclub-lang', default en).
+   - Banner language follows the site language (localStorage 'nomoclub-lang', default follows the page language, Dutch first).
    - Fires a "Lead" event when a contact channel is clicked (only if consent given).
    - Exposes window.nomoCookieSettings() to reopen the banner. No libraries. */
 (function () {
@@ -9,7 +9,12 @@
   var KEY      = 'nomo_cookie_consent';
 
   function texts() {
-    var nl = (function () { try { return localStorage.getItem('nomoclub-lang') === 'nl'; } catch (e) { return false; } })();
+    var nl = (function () {
+      var p = location.pathname;
+      if (/^\/(en|stories|memorial-song|love-song|wedding-song|birthday-song)(\.html)?\/?$/.test(p)) return false;
+      if (/^\/(contact|privacy|terms)(\.html)?\/?$/.test(p)) { try { return localStorage.getItem('nomoclub-lang') !== 'en'; } catch (e) { return true; } }
+      return true;
+    })();
     return nl
       ? { msg: 'We gebruiken cookies voor analyse en advertenties.',
           ok: 'Accepteren', no: 'Weigeren', more: 'Privacybeleid' }
