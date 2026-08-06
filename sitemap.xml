@@ -28,15 +28,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-<url>
-    <loc>https://nomoclub.com/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nomoclub.com/stories"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://nomoclub.com/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nomoclub.com/stories"/>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <url>
     <loc>https://nomoclub.com/stories</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nomoclub.com/stories"/>
