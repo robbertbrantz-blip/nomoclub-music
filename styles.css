@@ -194,3 +194,4 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
   body.navopen:not(.lang-en) .nav-right a.en{display:none}
 }
 body.lang-en a.brandlink.en{display:flex}
+body:not(.lang-en) a.brandlink.en{display:none}
