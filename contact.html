@@ -109,6 +109,7 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
   .h1brk{display:none}
 }
 </style>
+<style>.opt{font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.55;margin-left:7px;white-space:nowrap}</style>
 </head>
 <body class="lang-en">
 
@@ -139,8 +140,8 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
         <span class="nl">Vertel ons jouw verhaal</span>
       </h2>
       <p class="lead">
-        <span class="en">Every song starts with a story. Tell it in your own words — we'll turn it into something that lasts. A real person reads every story, and it's free and without obligation.</span>
-        <span class="nl">Elk lied begint met een verhaal. Vertel het in je eigen woorden — wij maken er iets blijvends van. Een echt mens leest elk verhaal, en het is gratis en vrijblijvend.</span>
+        <span class="en">Sometimes what you feel is too big for ordinary words. Tell it here in your own words, however unfinished. A real person reads every story, with all the care it deserves — and what you write stays between us. It is free, and you are not committing to anything.</span>
+        <span class="nl">Soms is wat je voelt te groot voor gewone woorden. Vertel het hier in je eigen woorden, hoe onaf ook. Een echt mens leest elk verhaal, met alle aandacht — en wat je schrijft blijft tussen ons. Het is gratis en je zit nergens aan vast.</span>
       </p>
 
       <div class="formcard">
@@ -155,11 +156,12 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
           <div class="field">
             <label class="flabel" for="f-email"><span class="en">Your email address <span class="req">*</span></span><span class="nl">Je e-mailadres <span class="req">*</span></span></label>
             <input type="email" id="f-email" name="email" maxlength="200" autocomplete="email" placeholder="naam@voorbeeld.nl">
+            <p class="fhint"><span class="en">This is where your free preview arrives. We use it for nothing else.</span><span class="nl">Hier sturen we je gratis fragment naartoe. Verder gebruiken we het nergens voor.</span></p>
           </div>
 
           <div class="nl">
             <div class="field">
-              <span class="flabel">In welke taal mag jouw lied gezongen worden? <span class="req">*</span></span>
+              <span class="flabel">In welke taal mag het lied klinken? <span class="req">*</span></span>
               <div class="langpick">
                 <label><input type="radio" name="song_language" value="Nederlands">Nederlands</label>
                 <label><input type="radio" name="song_language" value="Engels">Engels</label>
@@ -168,7 +170,7 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
           </div>
 
           <div class="field">
-            <label class="flabel" for="f-genre-nl" style="margin-bottom:7px"><span class="en">Which music feels like you? <span class="req">*</span></span><span class="nl">Welke muziek past bij jullie? <span class="req">*</span></span></label>
+            <label class="flabel" for="f-genre-nl" style="margin-bottom:7px"><span class="en">Which music fits this moment? <span class="req">*</span></span><span class="nl">Welke muziek past bij dit moment? <span class="req">*</span></span></label>
             <div class="nl">
               <select id="f-genre-nl" name="genre_nl">
                 <option value="">Kies wat het beste voelt...</option>
@@ -202,9 +204,14 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
           <div class="field">
             <label class="flabel" for="f-story"><span class="en">Your story <span class="req">*</span></span><span class="nl">Jouw verhaal <span class="req">*</span></span></label>
             <textarea id="f-story" name="story" maxlength="8000"></textarea>
-            <p class="fhint"><span class="en">Tell us about the person, the memories, what you want to say. It doesn't have to be perfect: the more you share, the more personal your song becomes.</span><span class="nl">Vertel over de persoon, de herinneringen, wat je wilt zeggen. Het hoeft niet perfect te zijn: hoe meer je deelt, hoe persoonlijker het lied wordt.</span></p>
+            <p class="fhint"><span class="en">Tell us about the person it is for: what you love about them, a memory that stays with you, something you still want to say. It does not have to be beautiful or complete — that part is ours.</span><span class="nl">Vertel over degene om wie het gaat: wat je liefhebt in die persoon, een herinnering die blijft, iets wat je nog wilt zeggen. Het hoeft niet mooi of compleet te zijn — dat deel is aan ons.</span></p>
           </div>
 
+          <div class="field">
+            <label class="flabel" for="f-owntext"><span class="en">Have you written something yourself? <span class="opt">optional</span></span><span class="nl">Heb je zelf al iets geschreven? <span class="opt">niet verplicht</span></span></label>
+            <textarea id="f-owntext" name="own_text" maxlength="8000" rows="4"></textarea>
+            <p class="fhint"><span class="en">A speech you gave, a letter, a poem — you can paste it here. Then we build the song around your words; that is the Your Words option. Would you rather send it later by email? That is fine too.</span><span class="nl">Een toespraak die je hebt gehouden, een brief, een gedicht — plak het hier gerust. Dan bouwen we het lied om jouw woorden heen; dat is de optie Jouw woorden. Liever later per e-mail nasturen? Ook goed.</span></p>
+          </div>
           <div class="hp-field" aria-hidden="true">
             <label for="f-website">Website</label>
             <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
@@ -215,20 +222,20 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
           </div>
 
           <button class="btn formbtn" type="submit" id="f-submit">
-            <span class="en">Send my story ♪</span><span class="nl">Verstuur mijn verhaal ♪</span>
+            <span class="en">Share my story ♪</span><span class="nl">Deel mijn verhaal ♪</span>
           </button>
           <p class="formstatus" id="f-status" role="alert"></p>
           <p class="formfoot">
-            <span class="en">No strings attached — you'll hear a free preview before you pay anything.</span>
-            <span class="nl">Vrijblijvend — je hoort eerst een gratis fragment voordat je iets betaalt.</span>
+            <span class="en">You are not committing to anything — you hear a free preview before you pay a thing.</span>
+            <span class="nl">Je zit nergens aan vast — je hoort eerst een gratis fragment, en pas daarna betaal je.</span>
           </p>
         </form>
 
         <div class="formsuccess" id="f-success">
-          <h3><span class="en">Thank you ♪</span><span class="nl">Dank je wel ♪</span></h3>
+          <h3><span class="en">Thank you for trusting us with this ♪</span><span class="nl">Dank je wel dat je dit met ons deelt ♪</span></h3>
           <p>
-            <span class="en">Your story has arrived. We'll read it with care, and you'll hear from us soon at the email address you shared.</span>
-            <span class="nl">Je verhaal is aangekomen. We lezen het met aandacht en je hoort snel van ons op het e-mailadres dat je hebt doorgegeven.</span>
+            <span class="en">Your story has arrived safely. We read every one ourselves, quietly and with care. You will hear from us at the email address you gave — usually within two days, and always from a person.</span>
+            <span class="nl">Je verhaal is goed aangekomen. We lezen het zelf, rustig en met aandacht. Je hoort van ons op het e-mailadres dat je hebt doorgegeven — meestal binnen twee dagen, en altijd van een mens.</span>
           </p>
         </div>
       </div>
@@ -284,18 +291,20 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
       name:      'Vul even je naam in.',
       email:     'Vul een geldig e-mailadres in.',
       language:  'Kies in welke taal jouw lied gezongen mag worden.',
-      genre:     'Kies welke muziek bij jullie past.',
-      story:     'Vertel ons je verhaal — daar wordt het lied van gemaakt.',
+      genre:     'Kies welke muziek bij dit moment past.',
+      story:     'Vertel ons je verhaal — daar maken we het lied van.',
       turnstile: 'Bevestig even dat je geen robot bent (het vinkje boven de knop).',
+      toolong:   'Je verhaal en je tekst samen zijn net te lang voor dit formulier. Mail je tekst gerust naar contact@nomoclub.com — dan lezen we hem daar met alle aandacht.',
       server:    'Er ging iets mis bij het versturen. Probeer het nog eens, of stuur ons een bericht via WhatsApp.'
     },
     en: {
       name:      'Please fill in your name.',
       email:     'Please fill in a valid email address.',
       language:  'Please choose the language of your song.',
-      genre:     'Please choose the music that feels like you.',
+      genre:     'Please choose the music that fits this moment.',
       story:     'Please tell us your story — that is what the song is made from.',
       turnstile: 'Please confirm you are not a robot (the checkbox above the button).',
+      toolong:   'Your story and your text together are a little too long for this form. Please email your text to contact@nomoclub.com — we will read it there with the same care.',
       server:    'Something went wrong while sending. Please try again, or message us on WhatsApp.'
     }
   };
@@ -338,6 +347,12 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 
     if (!story) return showError('story', form.querySelector('#f-story'));
 
+    var ownEl = form.querySelector('#f-owntext');
+    var ownText = ownEl ? ownEl.value.trim() : '';
+    var fullStory = ownText
+      ? story + '\n\n--- Eigen tekst die de afzender aanleverde (speech, brief of gedicht) ---\n' + ownText
+      : story;
+    if (fullStory.length > 7900) return showError('toolong', ownEl || form.querySelector('#f-story'));
     var tokenField = form.querySelector('[name="cf-turnstile-response"]');
     var token = tokenField ? tokenField.value : '';
     if (!token) return showError('turnstile');
@@ -347,7 +362,7 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
     data.append('email', email);
     data.append('song_language', songLanguage);
     data.append('genre', genre);
-    data.append('story', story);
+    data.append('story', fullStory);
     data.append('page_lang', isEN() ? 'en' : 'nl');
     data.append('website', form.querySelector('#f-website').value);
     data.append('cf-turnstile-response', token);
