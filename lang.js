@@ -7,6 +7,34 @@
     });
   });
 
+
+  /* ---------- uitklapmenu in de navigatie ---------- */
+  var drops = document.querySelectorAll('.navdrop');
+  function closeDrops(except) {
+    drops.forEach(function (d) {
+      if (d === except) return;
+      d.classList.remove('open');
+      var t = d.querySelector('.navdroptoggle');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  }
+  drops.forEach(function (d) {
+    var t = d.querySelector('.navdroptoggle');
+    if (!t) return;
+    t.addEventListener('click', function (e) {
+      e.stopPropagation();
+      closeDrops(d);
+      var open = d.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  if (drops.length) {
+    document.addEventListener('click', function () { closeDrops(null); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.keyCode === 27) closeDrops(null);
+    });
+  }
+
   /* ---------- click-to-play YouTube player (all pages) ---------- */
   /* No YouTube cookies are set until the visitor presses play. */
   document.querySelectorAll('.ytfacade').forEach(function (f) {

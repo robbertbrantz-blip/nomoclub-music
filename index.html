@@ -533,6 +533,33 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 @media(max-width:900px){.songgrid{grid-template-columns:1fr 1fr;gap:20px}}
 @media(max-width:620px){.songgrid{grid-template-columns:1fr;gap:18px;margin-top:24px}}
 </style>
+<style>
+/* uitklapmenu gelegenheden */
+.navdrop{position:relative}
+.navdroptoggle{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;color:inherit;font:inherit;font-size:14px;opacity:.85;cursor:pointer}
+.navdroptoggle:hover{opacity:1}
+.navdroptoggle .chev{transition:transform .18s ease}
+.navdrop.open .navdroptoggle .chev{transform:rotate(180deg)}
+.navdropmenu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:224px;background:#241320;border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:70}
+.navdrop.open .navdropmenu{display:block}
+.nav-right .navdropmenu a{display:block;padding:9px 12px;border-radius:8px;white-space:nowrap;font-size:15px;opacity:.9}
+.nav-right .navdropmenu a:hover{background:rgba(255,255,255,.08);opacity:1}
+/* kruimelpad */
+.crumbs{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin:0 0 18px;font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12.5px;letter-spacing:.02em}
+.storyhero .crumbs a{color:#fce4d4;opacity:.9;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.32)}
+.storyhero .crumbs a:hover{color:#fff;opacity:1}
+.storyhero .crumbs .crumbsep{color:#fce4d4;opacity:.55}
+.storyhero .crumbs [aria-current]{color:#fff;font-weight:600}
+@media(max-width:780px){
+  .navdroptoggle{display:none}
+  body.navopen .navdroptoggle{display:block;width:100%;text-align:left;padding:14px 0 4px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;cursor:default}
+  body.navopen .navdroptoggle .chev{display:none}
+  .navdrop{position:static}
+  .navdropmenu{display:block;position:static;transform:none;background:none;box-shadow:none;padding:0;min-width:0}
+  .nav-right .navdropmenu a{display:none}
+  body.navopen .nav-right .navdropmenu a{display:block;padding:12px 0 12px 14px;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px;white-space:normal}
+}
+</style>
 </head>
 <body class="lang-nl">
 <header class="nav">
@@ -545,7 +572,7 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <div class="nav-right">
 <a class="hidemob" href="#how"><span class="nl">Hoe het werkt</span></a>
 <a class="hidemob" href="#pricing"><span class="nl">Prijzen</span></a>
-<a href="/afscheidslied"><span class="nl">Afscheid</span></a>
+<div class="navdrop"><button type="button" class="navdroptoggle" aria-expanded="false">Gelegenheden<svg class="chev" aria-hidden="true" width="10" height="7" viewBox="0 0 10 7" fill="none"><path d="M1 1.5 5 5.5 9 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><div class="navdropmenu"><a href="/afscheidslied">Afscheidslied</a><a href="/bij-leven">Lied bij leven</a><a href="/sterfdag-herdenken">Sterfdag herdenken</a><a href="/missen-zonder-afscheid">Missen zonder afscheid</a><a href="/liefdeslied">Liefdeslied</a><a href="/bruiloftslied">Bruiloftslied</a><a href="/verjaardagslied">Verjaardagslied</a></div></div>
 <a href="/verhalen"><span class="nl">Verhalen</span></a>
 <a href="/contact"><span class="nl">Contact</span></a>
 <div class="langtoggle"><a data-lang="en" aria-label="English" title="English" href="/en"><svg aria-hidden="true" width="21" height="15" viewBox="0 0 60 30" style="display:block;border-radius:2px"><path d="M0 0v30h60V0z" fill="#012169"></path><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"></path><path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4"></path><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"></path><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"></path></svg></a><a class="active" data-lang="nl" aria-label="Nederlands" title="Nederlands" href="/"><svg aria-hidden="true" width="21" height="15" viewBox="0 0 21 15" style="display:block;border-radius:2px"><rect width="21" height="15" fill="#21468B"></rect><rect width="21" height="10" fill="#fff"></rect><rect width="21" height="5" fill="#AE1C28"></rect></svg></a></div>
