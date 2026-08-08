@@ -254,7 +254,9 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
       "brand": { "@type": "Brand", "name": "Nomoclub Music" },
       "offers": [
         { "@type": "Offer", "name": "Persoonlijk lied", "price": "69.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://nomoclub.com/#pricing" },
-        { "@type": "Offer", "name": "Complete uitgave", "price": "89.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://nomoclub.com/#pricing" }
+        { "@type": "Offer", "name": "Complete uitgave", "price": "89.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://nomoclub.com/#pricing" },
+        { "@type": "Offer", "name": "Jouw woorden", "price": "175.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://nomoclub.com/#pricing" },
+        { "@type": "Offer", "name": "Instrumentale versie", "price": "25.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://nomoclub.com/#pricing" }
       ]
     }
   ]
@@ -272,9 +274,7 @@ footer{background:#2b1331;color:#e7c9bb;padding:38px 0;font-size:14px}
         "text": "Meestal is jouw lied binnen vijf dagen klaar. Is er een bijzondere datum of is er weinig tijd? Dan kunnen we het lied met spoed binnen 24 uur leveren."
       }
     },
-    {
-      "@type": "Question",
-      "name": "Wanneer betaal ik?",
+    { "@type": "Question", "name": "Kan ik mijn eigen tekst of gedicht aanleveren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Heb je een speech, een brief of een gedicht geschreven, dan maken wij daar de songtekst van — dat is de optie Jouw woorden. Een gesproken tekst wordt daarbij korter: van ongeveer achthonderd woorden houd je zo’n tweehonderd gezongen woorden over. Je krijgt het lied ook zonder zang, zodat je het zelf kunt zingen." } }, { "@type": "Question", "name": "Wanneer betaal ik?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Je ontvangt eerst kosteloos een fragment van jouw lied. Zo kun je rustig luisteren of de tekst, muziek en sfeer passen bij jouw verhaal. Wil je daarna het complete lied ontvangen, dan betaal je eenvoudig via een Tikkie of een veilige betaallink."
@@ -560,6 +560,20 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
   body.navopen .nav-right .navdropmenu a{display:block;padding:12px 0 12px 14px;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px;white-space:normal}
 }
 </style>
+<style>
+/* derde pakket: drie kaarten naast elkaar */
+#pricing .cards{grid-template-columns:repeat(3,1fr);max-width:1180px}
+#pricing .card ul{margin-bottom:18px}
+.planfoot{max-width:760px;margin:22px auto 0;font-size:14.5px;line-height:1.65;opacity:.8}
+@media(max-width:1024px){
+  #pricing .cards{grid-template-columns:1fr 1fr;max-width:940px}
+  #pricing .cards>.card:last-child{grid-column:1/-1;max-width:460px;margin-left:auto;margin-right:auto}
+}
+@media(max-width:820px){
+  #pricing .cards{grid-template-columns:1fr}
+  #pricing .cards>.card:last-child{max-width:none}
+}
+</style>
 </head>
 <body class="lang-nl">
 <header class="nav">
@@ -742,7 +756,24 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 </ul>
 <a class="btn planbtn" href="/contact"><span class="nl">Kies de complete uitgave</span></a>
 </div>
+<div class="card">
+<h3><span class="nl">Jouw woorden</span></h3>
+<p class="plansub"><span class="nl">Van jouw speech, brief of gedicht maken we een lied</span></p>
+<div class="price"><span class="cur" data-eur="€175" data-gbp="£155" data-usd="$195">€175</span> <small><span class="nl">incl. btw</span></small></div>
+<p class="planintro"><span class="nl">Heb je zelf al iets geschreven? Dan bouwen we het lied om jouw woorden heen.</span></p>
+<ul>
+<li><span class="nl">Alles uit Persoonlijk lied</span></li>
+<li><span class="nl">Wij maken van jouw speech, brief of gedicht een songtekst</span></li>
+<li><span class="nl">Samen kiezen we de muziek die bij de woorden past</span></li>
+<li><span class="nl">Eén afstemronde op tekst en sfeer inbegrepen</span></li>
+<li><span class="nl">De instrumentale versie erbij, om zelf mee te zingen</span></li>
+<li><span class="nl">Een tekstblad met de woorden zoals ze gezongen worden</span></li>
+</ul>
+<a class="btn outline planbtn" href="/contact"><span class="nl">Stuur je tekst in</span></a>
 </div>
+</div>
+<p class="center planfoot"><span class="nl">Bij Persoonlijk lied en Complete uitgave kun je de instrumentale versie erbij nemen om zelf mee te zingen, voor <span class="cur" data-eur="€25" data-gbp="£22" data-usd="$28">€25</span>. Bij Jouw woorden zit die er al bij. Houd er rekening mee dat een gesproken tekst korter wordt: van ongeveer achthonderd woorden houd je zo’n tweehonderd gezongen woorden over.</span></p>
+
 <div class="infogrid">
 <div class="infoblock">
 <h3><span class="nl">Eerst luisteren, daarna beslissen</span></h3>
@@ -784,6 +815,10 @@ h2,h2.sec,.legal-wrap h1,.legal-wrap h2,.nudge{color:var(--deep)}
 <details>
 <summary><span class="nl">Hoe snel ontvang ik mijn lied?</span></summary>
 <p><span class="nl">Meestal is jouw lied binnen vijf dagen klaar. Is er een bijzondere datum of is er weinig tijd? Dan kunnen we het lied met spoed binnen 24 uur leveren.</span></p>
+</details>
+<details>
+<summary><span class="nl">Kan ik mijn eigen tekst of gedicht aanleveren?</span></summary>
+<p><span class="nl">Ja. Heb je een speech, een brief of een gedicht geschreven, dan maken wij daar de songtekst van — dat is de optie Jouw woorden. Een gesproken tekst wordt daarbij korter: van ongeveer achthonderd woorden houd je zo’n tweehonderd gezongen woorden over. Je krijgt het lied ook zonder zang, zodat je het zelf kunt zingen.</span></p>
 </details>
 <details>
 <summary><span class="nl">Wanneer betaal ik?</span></summary>
